@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026/06/16 台股 10 日成长 20 大股票 - 事件驱动分析</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "PingFang SC", "Microsoft JhengHei", sans-serif; background: linear-gradient(135deg, #f0f4f8 0%, #e0e8ef 100%); color: #1f2937; padding: 20px; line-height: 1.6; }
+.container { max-width: 1500px; margin: 0 auto; background: white; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); padding: 32px; }
+h1 { font-size: 28px; color: #1e40af; border-bottom: 3px solid #1e40af; padding-bottom: 12px; margin-bottom: 8px; }
+h2 { font-size: 22px; color: #047857; margin: 32px 0 16px; padding: 8px 16px; background: linear-gradient(90deg, #d1fae5 0%, transparent 100%); border-left: 5px solid #047857; border-radius: 4px; }
+h3 { font-size: 18px; color: #4338ca; margin: 16px 0 8px; }
+.meta { background: #f9fafb; border-radius: 8px; padding: 12px 16px; margin: 16px 0 24px; font-size: 13px; color: #6b7280; border-left: 3px solid #9ca3af; }
+table { width: 100%; border-collapse: collapse; margin: 16px 0 32px; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.04); border-radius: 8px; overflow: hidden; }
+th { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 14px 12px; text-align: left; font-weight: 600; font-size: 14px; white-space: nowrap; }
+td { padding: 14px 12px; border-bottom: 1px solid #e5e7eb; font-size: 13px; vertical-align: top; }
+tr:hover td { background: #f9fafb; }
+.code { font-family: "SF Mono", Menlo, monospace; color: #6b7280; font-size: 12px; font-weight: 500; }
+.name { font-weight: 600; color: #111827; }
+.pct { font-weight: 700; text-align: right; font-family: "SF Mono", Menlo, monospace; font-size: 14px; }
+.pct-high { color: #dc2626; }
+.pct-mid { color: #ea580c; }
+.business { color: #374151; font-size: 12px; line-height: 1.5; max-width: 280px; }
+.marquee { font-size: 12px; color: #1f2937; max-width: 600px; line-height: 1.6; background: #fffbeb; border-left: 3px solid #f59e0b; padding: 10px 14px; border-radius: 0 6px 6px 0; transition: all 0.2s; cursor: pointer; }
+.marquee:hover { background: #fef3c7; border-left-color: #dc2626; transform: translateX(2px); box-shadow: 0 2px 8px rgba(245,158,11,0.2); }
+.marquee a { text-decoration: none; color: inherit; display: block; }
+.marquee-link { display: inline-block; margin-top: 6px; color: #1e40af; font-size: 11px; text-decoration: underline; font-weight: 600; }
+.chart-section { margin: 40px 0 20px; padding: 20px; background: #f9fafb; border-radius: 12px; }
+.chart-img { width: 100%; max-width: 1400px; margin: 16px auto; display: block; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); }
+.footer { margin-top: 40px; padding: 16px; background: #f3f4f6; border-radius: 8px; font-size: 12px; color: #6b7280; line-height: 1.6; }
+.sector-tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-left: 6px; font-weight: 500; }
+.tag-electronic { background: #dbeafe; color: #1e40af; }
+.tag-finance { background: #d1fae5; color: #047857; }
+.electronic-row td { border-left: 3px solid #3b82f6; }
+.finance-row td { border-left: 3px solid #10b981; }
+.toc { background: #f9fafb; border-radius: 8px; padding: 16px; margin: 20px 0; font-size: 13px; }
+.toc a { color: #1e40af; text-decoration: none; }
+.toc a:hover { text-decoration: underline; }
+.modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 9999; align-items: center; justify-content: center; backdrop-filter: blur(4px); }
+.modal-overlay.active { display: flex; }
+.modal { background: white; border-radius: 12px; max-width: 900px; max-height: 80vh; width: 90%; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+.modal-header { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; }
+.modal-header h3 { color: white; margin: 0; font-size: 18px; }
+.modal-close { background: none; border: none; color: white; font-size: 28px; cursor: pointer; line-height: 1; padding: 0; }
+.modal-body { padding: 24px; overflow-y: auto; flex: 1; }
+.event-row { padding: 10px 0; border-bottom: 1px solid #e5e7eb; display: grid; grid-template-columns: 100px 1fr; gap: 12px; }
+.event-date { color: #6b7280; font-size: 13px; font-weight: 500; font-family: "SF Mono", Menlo, monospace; }
+.event-title { color: #1f2937; font-size: 14px; line-height: 1.6; }
+.event-source { display: inline-block; margin-left: 8px; padding: 2px 8px; background: #f3f4f6; border-radius: 4px; font-size: 11px; color: #6b7280; }
+.modal-link { display: inline-block; margin-top: 16px; padding: 8px 16px; background: #1e40af; color: white; text-decoration: none; border-radius: 6px; font-size: 13px; }
+.modal-link:hover { background: #1e3a8a; }
+.modal-footer { padding: 16px 24px; border-top: 1px solid #e5e7eb; background: #f9fafb; }
+</style>
+</head>
+<body>
+<div class="container">
+
+
+<h1>📈 2026 年 6 月 16 日台湾股市 10 日内成长 20 大股票</h1>
+<div class="meta">
+    <strong>报告日期</strong>：2026-06-16 收盘后　|　
+    <strong>资料范围</strong>：2026/05/15 ~ 2026/06/16 (33 天)　|　
+    <strong>样本</strong>：电子板块 Top 10 + 金融板块 Top 10 共 20 档<br>
+    <strong>涨幅定义</strong>：(2026/06/16 收盘 / 2026/06/02 基准日收盘 − 1) × 100%　|　
+    <strong>资料来源</strong>：TWSE + TPEx 官方历史资料、钜亨网 cnyes、MoneyDJ、经济日报、中央社、Google News RSS 300+ 笔原始事件<br>
+    <strong>操作说明</strong>：点击每档公司「新闻事件跑马灯」格位即可在弹出视窗中查看该公司的事件清单；底部按钮可开启 Markdown 完整档案
+</div>
+
+<div class="toc">
+<strong>📑 目录快速跳转</strong>：
+<a href="#electronic-table">↓ 电子板块 Top 10 表</a>　|
+<a href="#finance-table">↓ 金融板块 Top 10 表</a>　|
+<a href="#sector-avg-charts">↓ 5 日均线趋势图</a>　|
+<a href="#footer">↓ 资料来源</a>
+</div>
+
+<h2 id="electronic-table">📊 表 1 — 电子板块 Top 10 (依 10 日涨幅排序)</h2>
+
+<table>
+<thead>
+<tr>
+    <th style="width: 7%;">股票代号</th>
+    <th style="width: 10%;">公司名称</th>
+    <th style="width: 12%;">10日合计涨幅</th>
+    <th style="width: 25%;">公司经营项目</th>
+    <th style="width: 46%;">新闻事件跑马灯 (点击查看完整事件)</th>
+</tr>
+</thead>
+<tbody>
+
+
+<tr class="electronic-row">
+    <td class="code">2493</td>
+    <td class="name">揚博<span class="sector-tag tag-electronic">電子零組件業</span></td>
+    <td class="pct pct-high">+70.07%</td>
+    <td class="business">PCB / 半导体湿制程自动化设备 (AI 厚板/载板设备)<br><small style="color:#6b7280;">6/2 收 147.00 → 6/16 收 250.00</small></td>
+    <td class="marquee" onclick="showEvents('2493','揚博')">
+        <marquee scrollamount="2" behavior="scroll" direction="left">《揚博》【05-26】AI厚板「除水神盾」發威！揚博 設備材料雙引擎噴出鎖漲停… ▶ 【05-27】錯過 3000 元的弘塑？你不能再錯過150元的先進封裝… ▶ 【06-12】揚博攻上漲停207元，受惠AI高階PCB與特化材料題材帶… ▶ 【06-14】2493 揚博- 115/6/15 盤後- 股市爆料同學… ▶ 【06-15】揚博亮燈漲停至227.5元，受惠AI高階PCB濕製程與特… ▶ 【06-16】AI高階載板需求升溫！揚博股價強勢表態！ - CMone… ▶ 【06-16】揚博亮燈漲停至250元，AI特化材料題材發酵＋主力與自營… ▶ 【06-16】2493 揚博 - 該下車的，都下車了 安靜是最好的投資… ▶ 【06-16】盈餘：揚博股價遭警示，自結5月歸屬母公司淨利6300萬元… ▶ 【06-16】2493 揚博- 115/6/16 晚飯後- 股市爆料同…</marquee>
+        <span class="marquee-link">👉 点击查看完整事件清单 →</span>
+    </td>
+</tr>
+
+
+<tr class="electronic-row">
+    <td class="code">5426</td>
+    <td class="name">振發<span class="sector-tag tag-electronic">電腦及週邊設備業</span></td>
+    <td class="pct pct-high">+66.52%</td>
+    <td class="business">AI 服务器机壳 / 高效能运算机构件<br><small style="color:#6b7280;">6/2 收 22.55 → 6/16 收 37.55</small></td>
+    <td class="marquee" onclick="showEvents('5426','振發')">
+        <marquee scrollamount="2" behavior="scroll" direction="left">《振發》【05-31】5426 振發- 輝達概念股最新名單，誰最低價，會有幾個… ▶ 【06-05】AI機殼飆股新星誕生！振發 連拉三根進逼漲停翻身高效能運… ▶ 【06-08】快訊》4檔台股處置股新名單曝！「1妖股」暴跌近60%抓去… ▶ 【06-08】振發股價上攻逾8%，受AI伺服器散熱與低軌衛星題材加持，… ▶ 【06-09】處置股追蹤 0609／今日新增 4 檔，來億-KY、好德… ▶ 【06-11】振發- - 券商分點進出買賣統計 - 股市爆料同學會 -… ▶ 【06-11】討論牆 | 盤中速報 - 振發股價殺至跌停，跌停價32.… ▶ 【06-15】振發亮燈漲停35.6元，AI伺服器機殼題材發酵＋均線多頭… ▶ 【06-16】振發股價勁揚站上37元上方，AI伺服器機殼題材發酵＋多頭… ▶ 【06-16】5426 振發- 賣美債台股買台股唯一5.4%類定存股避…</marquee>
+        <span class="marquee-link">👉 点击查看完整事件清单 →</span>
+    </td>
+</tr>
+
+
+<tr class="electronic-row">
+    <td class="code">3362</td>
+    <td class="name">先進光<span class="sector-tag tag-electronic">光電業</span></td>
+    <td class="pct pct-high">+62.34%</td>
+    <td class="business">光学镜头 / 雷射元件 (CPO/光通讯题材)<br><small style="color:#6b7280;">6/2 收 119.50 → 6/16 收 194.00</small></td>
+    <td class="marquee" onclick="showEvents('3362','先進光')">
+        <marquee scrollamount="2" behavior="scroll" direction="left">《先進光》【06-04】先進光攻 CPO 爭取與大股東大立光產品搭配送樣 - 經… ▶ 【06-16】今日漲停股｜AI高速光通訊、光學鏡頭與被動元件百花齊放！… ▶ 【06-16】1圖懂》大立光上看6250元！CPO為何是光學3王新戰場… ▶ 【06-16】先進光亮燈漲停至194元，CPO題材資金追捧＋主力與法人… ▶ 【06-16】光學雙雄攜手亮燈！大立光、先進光飆漲停 引爆「大帶小」 … ▶ 【06-16】《光電股》注意股：先進光 近5日漲24.76% - 富聯…</marquee>
+        <span class="marquee-link">👉 点击查看完整事件清单 →</span>
+    </td>
+</tr>
+
+
+<tr class="electronic-row">
+    <td class="code">5227</td>
+    <td class="name">立凱-KY<span class="sector-tag tag-electronic">電子零組件業</span></td>
+    <td class="pct pct-high">+52.87%</td>
+    <td class="business">LFP 磷酸铁锂电池正极材料 (Tesla 储能订单)<br><small style="color:#6b7280;">6/2 收 24.40 → 6/16 收 37.30</small></td>
+    <td class="marquee" onclick="showEvents('5227','立凱-KY')">
+        <marquee scrollamount="2" behavior="scroll" direction="left">《立凱-KY》【06-11】立凱-KY傳迎特斯拉訂單，估2027年下半年出貨- 新聞… ▶ 【06-11】立凱-KY拿下特斯拉長單 擬斥資3億元建廠、明年出貨 -… ▶ 【06-11】北美LFP非紅色供應鏈成形 立凱KY大單背後的產業變局 … ▶ 【06-11】立凱傳奪特斯拉大單 - 經濟日報 ▶ 【06-12】立凱-KY亮燈漲停30.9元，北美長約與現增建LFP新產… ▶ 【06-16】討論牆 | 盤中速報 - 立凱-KY股價拉至漲停，漲停價… ▶ 【06-16】美祭「排中條款」！台廠電池鏈迎轉單大紅利 立凱、台達電、… ▶ 【06-16】5227 立凱-KY - 六月4千點獲利😇月月千點入袋💕… ▶ 【06-16】《電零組》注意股：立凱-KY 近5日漲25.74% - …</marquee>
+        <span class="marquee-link">👉 点击查看完整事件清单 →</span>
+    </td>
+</tr>
+
+
+<tr class="electronic-row">
+    <td class="code">4542</td>
+    <td class="name">科嶠<span class="sector-tag tag-electronic">電子零組件業</span></td>
+    <td class="pct pct-mid">+49.68%</td>
+    <td class="business">半导体湿制程设备 (载具清洗) / 自动化设备<br><small style="color:#6b7280;">6/2 收 236.50 → 6/16 收 354.00</small></td>
+    <td class="marquee" onclick="showEvents('4542','科嶠')">
+        <marquee scrollamount="2" behavior="scroll" direction="left">《科嶠》【05-21】科嶠亮燈漲停至259.5元，受裝置成長想像推升買盤，主力… ▶ 【05-26】科嶠獲利／自結4月EPS 0.15元 - UDN ▶ 【06-07】4542 科嶠- 週一怎麼看- 股市爆料同學會 - CM… ▶ 【06-09】科嶠攻上漲停345.5元，半導體載具清洗與營收成長加持＋… ▶ 【06-12】科嶠 06/12到06/26列入處置股，採20分盤交易 … ▶ 【06-12】科嶠亮燈漲停335.5元，短線資金搶題材搭配前期主力偏多… ▶ 【06-12】討論牆 | 盤中速報 - 科嶠急拉3.96%報315.0… ▶ 【06-13】討論牆 | 盤中速報 - 科嶠股價拉至漲停，漲停價335… ▶ 【06-16】《電零組》注意股：科嶠 近5日漲14.47% - 富聯網</marquee>
+        <span class="marquee-link">👉 点击查看完整事件清单 →</span>
+    </td>
+</tr>
+
+
+<tr class="electronic-row">
+    <td class="code">3285</td>
+    <td class="name">微端<span class="sector-tag tag-electronic">其他電子業</span></td>
+    <td class="pct pct-mid">+49.59%</td>
+    <td class="business">数位音效 IC 设计 / AI PC 品牌合作<br><small style="color:#6b7280;">6/2 收 30.75 → 6/16 收 46.00</small></td>
+    <td class="marquee" onclick="showEvents('3285','微端')">
+        <marquee scrollamount="2" behavior="scroll" direction="left">《微端》【06-10】微端 五月營收1.41億元，表現亮眼、呈現雙成長，年增2… ▶ 【06-10】營收：微端5月營收1億4144萬元，月增率93.54%，… ▶ 【06-11】子公司PCB設備挹注大，微端今年營運樂觀看待- 新聞 -… ▶ 【06-11】討論牆 | 盤中速報 - 微端急拉4.93%報31.9元… ▶ 【06-14】討論牆 | 盤中速報 - 微端股價拉至漲停，漲停價41.… ▶ 【06-15】微端今年展望看樂觀；數位音效產品合作品牌大廠- 新聞 -… ▶ 【06-16】《其他電》注意股：微端 近5日漲47.67% - 富聯網</marquee>
+        <span class="marquee-link">👉 点击查看完整事件清单 →</span>
+    </td>
+</tr>
+
+
+<tr class="electronic-row">
+    <td class="code">3441</td>
+    <td class="name">聯一光<span class="sector-tag tag-electronic">光電業</span></td>
+    <td class="pct pct-mid">+48.08%</td>
+    <td class="business">光学元件 / 光通讯模组 (CPO 题材)<br><small style="color:#6b7280;">6/2 收 54.70 → 6/16 收 81.00</small></td>
+    <td class="marquee" onclick="showEvents('3441','聯一光')">
+        <marquee scrollamount="2" behavior="scroll" direction="left">《聯一光》【05-20】股東會通過0.85元現金股利分配案！「這光學廠」今年營運… ▶ 【05-25】聯一光車載/醫療需求擴大，接單能見度提升 - 台視全球資… ▶ 【06-11】今日漲停股｜被動元件、光學與AI基建領軍，聯一光、晶技、… ▶ 【06-15】聯一光 個股概覽 | 個股 - 股市 - CMoney ▶ 【06-15】費半狂飆7% 助攻台股千點大反撲，下周台股會V轉嗎?外本… ▶ 【06-16】討論牆 | 盤中速報 - 聯一光急拉4.53%報73.7… ▶ 【06-16】「光學」低檔出發 還有哪些北上列車蓄勢待發? - 華冠投…</marquee>
+        <span class="marquee-link">👉 点击查看完整事件清单 →</span>
+    </td>
+</tr>
+
+
+<tr class="electronic-row">
+    <td class="code">3550</td>
+    <td class="name">聯穎<span class="sector-tag tag-electronic">電子零組件業</span></td>
+    <td class="pct pct-mid">+46.90%</td>
+    <td class="business">铜箔基板 / 复合材料 (AI 高速线/医疗线)<br><small style="color:#6b7280;">6/2 收 21.00 → 6/16 收 30.85</small></td>
+    <td class="marquee" onclick="showEvents('3550','聯穎')">
+        <marquee scrollamount="2" behavior="scroll" direction="left">《聯穎》【05-29】3550 聯穎- 本質工控、車用線材及AI 伺服器高速傳… ▶ 【06-05】聯穎Q2營收可望維持雙增拚近年高，毛利率續揚- 新聞 -… ▶ 【06-05】營收速報 - 聯穎5月營收3.92億元年增率高達36.5… ▶ 【06-11】聯穎4月自結損益年增189% EPS0.24元賺贏Q1 … ▶ 【06-12】聯穎4月EPS 0.24元，單月賺贏Q1 - 台視全球資… ▶ 【06-13】討論牆 | 盤中速報 - 聯穎急拉3.5%報28.1元，… ▶ 【06-16】《電零組》注意股：聯穎 近5日漲19.11% - 富聯網 ▶ 【06-16】聯穎亮燈漲停至30.85元，AI高速線題材發酵＋前期主力…</marquee>
+        <span class="marquee-link">👉 点击查看完整事件清单 →</span>
+    </td>
+</tr>
+
+
+<tr class="electronic-row">
+    <td class="code">2478</td>
+    <td class="name">大毅<span class="sector-tag tag-electronic">電子零組件業</span></td>
+    <td class="pct pct-mid">+44.76%</td>
+    <td class="business">电阻 / 被動元件 (AI 主板高阶电阻)<br><small style="color:#6b7280;">6/2 收 143.00 → 6/16 收 207.00</small></td>
+    <td class="marquee" onclick="showEvents('2478','大毅')">
+        <marquee scrollamount="2" behavior="scroll" direction="left">《大毅》【05-28】大毅股價勁揚逾5%至127元，被動元件強勢題材發酵＋前期… ▶ 【05-29】處置股追蹤 0526／今日新增 10 檔，國巨、大毅、昇… ▶ 【05-30】2478 大毅 - 經過20年了！ 國巨會不會再來併購ㄧ… ▶ 【06-09】狂吃AI主板高階電阻！大毅 處置解禁首日爆量衝漲停 - … ▶ 【06-11】2478 大毅- 不可輕忽，不可大易- 股市爆料同學會 … ▶ 【06-11】最牛一輪／大毅犀利 台新5C 叫好 - UDN ▶ 【06-16】大毅亮燈漲停至207元，被動元件漲價＋外資連續回補推升多…</marquee>
+        <span class="marquee-link">👉 点击查看完整事件清单 →</span>
+    </td>
+</tr>
+
+
+<tr class="electronic-row">
+    <td class="code">5468</td>
+    <td class="name">凱鈺<span class="sector-tag tag-electronic">半導體業</span></td>
+    <td class="pct pct-mid">+43.44%</td>
+    <td class="business">类比 IC / 电源管理 IC (人形机器人题材)<br><small style="color:#6b7280;">6/2 收 18.30 → 6/16 收 26.25</small></td>
+    <td class="marquee" onclick="showEvents('5468','凱鈺')">
+        <marquee scrollamount="2" behavior="scroll" direction="left">《凱鈺》【05-28】凱鈺- - 券商分點進出買賣統計 - 股市爆料同學會 -… ▶ 【06-09】凱鈺 五月營收表現亮眼、呈現雙成長，創近2個月以來新高，… ▶ 【06-10】凱鈺人形機器人出擊 - 經濟日報 ▶ 【06-10】凱鈺推首款人形機器人，跨足具身智能領域- 新聞 - Mo… ▶ 【06-10】5468 凱鈺- 凱鈺由IC設計轉型多元化經營有成推出首… ▶ 【06-12】討論牆 | 盤中速報 - 凱鈺股價拉至漲停，漲停價19.… ▶ 【06-16】凱鈺亮燈漲停至26.25元，機器人＋智慧製造題材發酵、主… ▶ 【06-16】《半導體》注意股：凱鈺 近5日漲36.96% - 富聯網</marquee>
+        <span class="marquee-link">👉 点击查看完整事件清单 →</span>
+    </td>
+</tr>
+
+</tbody></table>
+<h2 id="finance-table">💰 表 2 — 金融板块 Top 10 (依 10 日涨幅排序)</h2>
+
+<table>
+<thead>
+<tr>
+    <th style="width: 7%;">股票代号</th>
+    <th style="width: 10%;">公司名称</th>
+    <th style="width: 12%;">10日合计涨幅</th>
+    <th style="width: 25%;">公司经营项目</th>
+    <th style="width: 46%;">新闻事件跑马灯 (点击查看完整事件)</th>
+</tr>
+</thead>
+<tbody>
+
+
+<tr class="finance-row">
+    <td class="code">2883</td>
+    <td class="name">凱基金<span class="sector-tag tag-finance">金融保險業</span></td>
+    <td class="pct pct-mid">+26.92%</td>
+    <td class="business">原凯基证券 (2026 改名凯基金控) / 资产管理<br><small style="color:#6b7280;">6/2 收 23.40 → 6/16 收 29.70</small></td>
+    <td class="marquee" onclick="showEvents('2883','凱基金')">
+        <marquee scrollamount="2" behavior="scroll" direction="left">《凱基金》【06-02】〈凱基金法說〉凱壽前4月股海賺近200億元 明年股利新計… ▶ 【06-03】25分鐘直衝漲停！凱基金（2883）為何創下24年股價新… ▶ 【06-03】獲利狂飆3倍凱基金股價攻漲停法人喊出最新目標價- 證券 … ▶ 【06-12】凱基金通過發放現金股利1元 創5年最高配發率 - 自由財… ▶ 【06-14】營收速報 - 凱基金5月營收115.84億元年增率高達1… ▶ 【06-15】6/15台股交易回顧｜凱基金漲勢驚人-林恩如 - CMo… ▶ 【06-15】凱基金 五月持平 - CMoney ▶ 【06-15】高殖利率金控股超人氣 國泰、凱基、中信、富邦有望衝破4.…</marquee>
+        <span class="marquee-link">👉 点击查看完整事件清单 →</span>
+    </td>
+</tr>
+
+
+<tr class="finance-row">
+    <td class="code">2887</td>
+    <td class="name">台新新光金<span class="sector-tag tag-finance">金融保險業</span></td>
+    <td class="pct pct-mid">+23.75%</td>
+    <td class="business">2025 台新金与新光金合并 / 公股+民营混合<br><small style="color:#6b7280;">6/2 收 26.10 → 6/16 收 32.30</small></td>
+    <td class="marquee" onclick="showEvents('2887','台新新光金')">
+        <marquee scrollamount="2" behavior="scroll" direction="left">《台新新光金》【06-11】71萬股東看過來！台新新光金前5月獲利348億元年增四倍… ▶ 【06-12】台新新光金併後首場股東會！銀行二合一力拚年底完成 吳東亮… ▶ 【06-15】Factset 最新調查：台新新光金目標價調升至24.8… ▶ 【06-15】台新新光金狂牛來了！大金主是「他們」 放量狂噴71萬股東… ▶ 【06-15】個股／快檢查！你有買嗎？ 台新新光金目標價 - 三立新聞… ▶ 【06-15】台新新光金 今日僅1家券商發布績效評等報告，評價為中立，… ▶ 【06-16】2887 台新新光金- 台新證券邁入「兆元投信」💪💪 大… ▶ 【06-16】台新新光金首季狂賺210億！法人卻不買單直指1關鍵讓配息… ▶ 【06-16】台新新光金、長榮航 熱 - 經濟日報 ▶ 【06-16】2887 台新新光金 - 兆元投信是在綠什麼🤠🤠 - 股…</marquee>
+        <span class="marquee-link">👉 点击查看完整事件清单 →</span>
+    </td>
+</tr>
+
+
+<tr class="finance-row">
+    <td class="code">2882</td>
+    <td class="name">國泰金<span class="sector-tag tag-finance">金融保險業</span></td>
+    <td class="pct pct-mid">+22.76%</td>
+    <td class="business">国泰金控 (人寿 + 产险 + 证券)<br><small style="color:#6b7280;">6/2 收 89.20 → 6/16 收 109.50</small></td>
+    <td class="marquee" onclick="showEvents('2882','國泰金')">
+        <marquee scrollamount="2" behavior="scroll" direction="left">《國泰金》【05-28】國泰金法說》談明年股利 李長庚：相當樂觀 國壽股票未實現… ▶ 【06-16】2882 國泰金- 存股族注意2官股金控入選大咖法人13… ▶ 【06-16】富邦金、國泰金帶頭衝！6金控飆新高　狂催除息行情 - E… ▶ 【06-16】存股族注意了！不是富邦金、中信金2官股金控入選大咖法人「… ▶ 【06-16】〈焦點股〉「隱形獲利」引爆價值補漲 國泰、凱基壽險型金控… ▶ 【06-16】國泰金股價勁揚至109元、上漲4.81%，金融權值買盤點…</marquee>
+        <span class="marquee-link">👉 点击查看完整事件清单 →</span>
+    </td>
+</tr>
+
+
+<tr class="finance-row">
+    <td class="code">2881</td>
+    <td class="name">富邦金<span class="sector-tag tag-finance">金融保險業</span></td>
+    <td class="pct ">+16.30%</td>
+    <td class="business">富邦金控 (人寿 + 产险 + 证券)<br><small style="color:#6b7280;">6/2 收 113.50 → 6/16 收 132.00</small></td>
+    <td class="marquee" onclick="showEvents('2881','富邦金')">
+        <marquee scrollamount="2" behavior="scroll" direction="left">《富邦金》【06-12】富邦金股東會》蔡明興為股價抱屈「現在蠻低的」 明年股利有… ▶ 【06-16】Factset 最新調查：富邦金EPS預估上修至10.0…</marquee>
+        <span class="marquee-link">👉 点击查看完整事件清单 →</span>
+    </td>
+</tr>
+
+
+<tr class="finance-row">
+    <td class="code">2890</td>
+    <td class="name">永豐金<span class="sector-tag tag-finance">金融保險業</span></td>
+    <td class="pct ">+13.87%</td>
+    <td class="business">永丰金控 (银行 + 证券)<br><small style="color:#6b7280;">6/2 收 31.00 → 6/16 收 35.30</small></td>
+    <td class="marquee" onclick="showEvents('2890','永豐金')">
+        <marquee scrollamount="2" behavior="scroll" direction="left">《永豐金》【05-25】永豐金股東會完成改選並通過1.3元股利 總座朱士廷：明年… ▶ 【06-08】營收速報 - 永豐金5月營收99.77億元年增率高達82… ▶ 【06-13】2890 永豐金 - 外資狂敲，價量齊揚攻高 永豐金..… ▶ 【06-15】永豐金子公司經理人楊健閣於15日申報轉讓永豐金股票84.… ▶ 【06-16】2890 永豐金 - 外資連買降溫，高檔量縮整理 ...…</marquee>
+        <span class="marquee-link">👉 点击查看完整事件清单 →</span>
+    </td>
+</tr>
+
+
+<tr class="finance-row">
+    <td class="code">2851</td>
+    <td class="name">中再保<span class="sector-tag tag-finance">金融保險業</span></td>
+    <td class="pct ">+13.41%</td>
+    <td class="business">中央再保险公司 (高殖利率题材)<br><small style="color:#6b7280;">6/2 收 35.05 → 6/16 收 39.75</small></td>
+    <td class="marquee" onclick="showEvents('2851','中再保')">
+        <marquee scrollamount="2" behavior="scroll" direction="left">《中再保》【05-25】股票投資「錦上添花」 中再保114年大賺29.3億元、7… ▶ 【05-25】中再保股東會》幸福企業！ 基層加薪最高7% 總座：人才招… ▶ 【05-26】中再保董座 鍾志宏出任 - 經濟日報 ▶ 【05-28】中再保訂5/29召開法說會 - CMoney ▶ 【06-16】中再保股價上漲逾4%來到39.7元，高殖利率防禦題材受資… ▶ 【06-16】中再保領跑產險獲利潮，核保/投資引擎驅動營運 - 台視全…</marquee>
+        <span class="marquee-link">👉 点击查看完整事件清单 →</span>
+    </td>
+</tr>
+
+
+<tr class="finance-row">
+    <td class="code">2892</td>
+    <td class="name">第一金<span class="sector-tag tag-finance">金融保險業</span></td>
+    <td class="pct ">+12.97%</td>
+    <td class="business">第一金控 (公股银行)<br><small style="color:#6b7280;">6/2 收 28.15 → 6/16 收 31.80</small></td>
+    <td class="marquee" onclick="showEvents('2892','第一金')">
+        <marquee scrollamount="2" behavior="scroll" direction="left">《第一金》【06-02】〈第一金法說〉最強首季大賺82.44億元 擬配1.3元股… ▶ 【06-12】公股4金2銀前5月猛賺735億成長飆4成華南金年增73%… ▶ 【06-15】第一金、華南金誰更強？獲利、EPS 一路拚到股價 - U… ▶ 【06-15】第一金獲利動能擴大，上修今年放款成長目標 - 台視全球資… ▶ 【06-16】2892 第一金 - 投信萬張大買，籌碼高度集中 ...… ▶ 【06-16】第一金衝18年新高！最大買家是「他們」 45萬股東吃香喝… ▶ 【06-16】《台北股市》投信16日買超股：第一金、遠東新、聯電 - … ▶ 【06-16】千億級00713飆天價！換股增刪15檔 砍富邦金、凱基金…</marquee>
+        <span class="marquee-link">👉 点击查看完整事件清单 →</span>
+    </td>
+</tr>
+
+
+<tr class="finance-row">
+    <td class="code">2801</td>
+    <td class="name">彰銀<span class="sector-tag tag-finance">金融保險業</span></td>
+    <td class="pct ">+10.68%</td>
+    <td class="business">彰化商业银行 (公股)<br><small style="color:#6b7280;">6/2 收 20.60 → 6/16 收 22.80</small></td>
+    <td class="marquee" onclick="showEvents('2801','彰銀')">
+        <marquee scrollamount="2" behavior="scroll" direction="left">《彰銀》【05-25】2801 彰銀 - 外資連日賣超，投信逆勢承接 今...… ▶ 【05-26】〈彰銀法說〉財管海外雙翅膀帶飛！彰銀首季EPS 0.44… ▶ 【05-26】彰銀法說會／首季獲利飆新高 喊前進亞利桑那州 - 經濟日… ▶ 【05-27】2801 彰銀- 持續買進彰銀，彎腰撿鑽石💎-股市爆料同… ▶ 【06-09】2801 彰銀 - 外資逆勢連買，籌碼集中 今天大...… ▶ 【06-10】△個股：彰銀統籌主辦耐斯廣場31.6億元聯貸案完成簽約 … ▶ 【06-11】彰銀響應企業投資美國融資保證機制 承諾2,500萬美元助…</marquee>
+        <span class="marquee-link">👉 点击查看完整事件清单 →</span>
+    </td>
+</tr>
+
+
+<tr class="finance-row">
+    <td class="code">2891</td>
+    <td class="name">中信金<span class="sector-tag tag-finance">金融保險業</span></td>
+    <td class="pct ">+10.45%</td>
+    <td class="business">中国信托金控 (银行 + 人寿)<br><small style="color:#6b7280;">6/2 收 64.10 → 6/16 收 70.80</small></td>
+    <td class="marquee" onclick="showEvents('2891','中信金')">
+        <marquee scrollamount="2" behavior="scroll" direction="left">《中信金》【05-28】中信金（2891）衝60元！不敗教主陳重銘：10幾年來領… ▶ 【06-03】中信金攻上漲停70.5元，高息ETF納入帶動買盤追價＋主… ▶ 【06-04】中信金（2891）狂飆70.5元歷史天價！陳重銘驚吐「沒… ▶ 【06-11】營收速報 - 中信金5月營收192.18億元年增率高達3… ▶ 【06-11】富邦金、中信金、元大金全賣了！存股達人只留「這2檔」賺最… ▶ 【06-12】57萬股東笑了！中信金前5月大賺347億 豪發2.5元現… ▶ 【06-12】〈中信金股東會〉通過配息2.5元創高！總座：證券持續尋求… ▶ 【06-12】中信金公告05月營收 - CMoney ▶ 【06-12】中信金證券事業火熱　總座：尋求擴張併購機會 - ETto…</marquee>
+        <span class="marquee-link">👉 点击查看完整事件清单 →</span>
+    </td>
+</tr>
+
+
+<tr class="finance-row">
+    <td class="code">5864</td>
+    <td class="name">致和證<span class="sector-tag tag-finance">金融保險業</span></td>
+    <td class="pct ">+10.02%</td>
+    <td class="business">致和证券 (自营业务为主)<br><small style="color:#6b7280;">6/2 收 45.40 → 6/16 收 49.95</small></td>
+    <td class="marquee" onclick="showEvents('5864','致和證')">
+        <marquee scrollamount="2" behavior="scroll" direction="left">《致和證》【05-27】台股焦點：致和證 - 台視全球資訊網 ▶ 【05-27】致和證攻上漲停38.6元，受惠券商族群走強＋外資回補推升… ▶ 【05-27】致和證- - 券商分點進出買賣統計-股市爆料同學會 - … ▶ 【05-28】4月單月狂賺近4元！致和證 自營大爆發飆天價 - 理財周… ▶ 【05-29】5864 致和證- 複利的威力，讓時間替你賺錢-股市爆料… ▶ 【06-02】5864 致和證 - 明天想賣零股-股市爆料同學會 - … ▶ 【06-05】致和證股價上漲逾4%至52.9元，受券商獲利與制度利多加… ▶ 【06-12】致和證攻上漲停47.25元，受惠券商族群資金迴流＋技術面… ▶ 【06-15】個股：致和證6/16受邀參加統一證券國際法人部舉辦之線上…</marquee>
+        <span class="marquee-link">👉 点击查看完整事件清单 →</span>
+    </td>
+</tr>
+
+</tbody></table>
+
+<h2 id="sector-avg-charts">📉 5 日均线趋势图 (板块平均比较)</h2>
+<div class="meta">
+    以下三张图为电子板块与金融板块 10 档股票的 <strong>5 日均线 (SMA5) 平均趋势对比</strong>。
+    基期 = 2026/06/02 收盘 (=100)，期间涵盖 2026/01/02 ~ 2026/06/16。
+    可以清楚看出两板块自 2026/05/19 后走势急剧分化，电子板块 SMA5 平均 10 日累计 <strong style="color:#dc2626;">+36.05%</strong>，
+    金融板块 <strong style="color:#047857;">+11.14%</strong>，差距 24.91 点。
+</div>
+
+
+<div class="chart-section">
+<h3>🟢 电子板块 10 档 SMA5 平均趋势</h3>
+<img src="charts_ma/_sector_avg_electronic.png" class="chart-img" alt="电子板块 SMA5 平均趋势图">
+</div>
+
+<div class="chart-section">
+<h3>🟢 金融板块 10 档 SMA5 平均趋势</h3>
+<img src="charts_ma/_sector_avg_finance.png" class="chart-img" alt="金融板块 SMA5 平均趋势图">
+</div>
+
+<div class="chart-section">
+<h3>⚔️ 两板块 SMA5 平均直接对比 (含差距阴影)</h3>
+<img src="charts_ma/_sector_avg_comparison.png" class="chart-img" alt="两板块 SMA5 平均对比">
+</div>
+
+
+<div id="modal" class="modal-overlay" onclick="if(event.target===this) closeModal()">
+    <div class="modal" onclick="event.stopPropagation()">
+        <div class="modal-header">
+            <h3 id="modalTitle">公司事件</h3>
+            <button class="modal-close" onclick="closeModal()">×</button>
+        </div>
+        <div id="modalBody" class="modal-body"></div>
+        <div id="modalFooter" class="modal-footer"></div>
+    </div>
+</div>
+
+<script>
+const EVENTS_DATA = {"2493": {"name": "揚博", "stock_events": [{"date": "2026-05-26", "title": "AI厚板「除水神盾」發威！揚博(2493) 設備材料雙引擎噴出鎖漲停 - 理財周刊", "source": "理財周刊"}, {"date": "2026-05-27", "title": "錯過 3000 元的弘塑？你不能再錯過150元的先進封裝「隱形黑馬」揚博(2493) - 理財周刊", "source": "理財周刊"}, {"date": "2026-06-12", "title": "【11:12 即時新聞】揚博(2493)攻上漲停207元，受惠AI高階PCB與特化材料題材帶動，多頭格局延續主力與均線多頭結構 - CMoney投資網誌", "source": "CMoney投資網誌"}, {"date": "2026-06-14", "title": "2493 揚博- 115/6/15 盤後- 股市爆料同學會 - CMoney", "source": "CMoney"}, {"date": "2026-06-15", "title": "【11:27 即時新聞】揚博(2493)亮燈漲停至227.5元，受惠AI高階PCB濕製程與特化材料題材＋多頭均線、多方籌碼強勢集中 - CMoney投資網誌", "source": "CMoney投資網誌"}, {"date": "2026-06-16", "title": "AI高階載板需求升溫！揚博(2493)股價強勢表態！ - CMoney", "source": "CMoney"}, {"date": "2026-06-16", "title": "【10:27 即時新聞】揚博(2493)亮燈漲停至250元，AI特化材料題材發酵＋主力與自營商同步加碼推高波段走勢 - CMoney投資網誌", "source": "CMoney投資網誌"}, {"date": "2026-06-16", "title": "2493 揚博 - 該下車的，都下車了 安靜是最好的投資 - 股市爆料同學會 - CMoney", "source": "CMoney"}, {"date": "2026-06-16", "title": "盈餘：揚博(2493)股價遭警示，自結5月歸屬母公司淨利6300萬元，EPS 0.49元 - 富聯網", "source": "富聯網"}, {"date": "2026-06-16", "title": "2493 揚博- 115/6/16 晚飯後- 股市爆料同學會 - CMoney", "source": "CMoney"}]}, "5426": {"name": "振發", "stock_events": [{"date": "2026-05-31", "title": "5426 振發- 輝達概念股最新名單，誰最低價，會有幾個燈⊕⊕⊕⊕⊕⊕⊕⊕⊕? - 股市爆料同學會 - CMoney", "source": "CMoney"}, {"date": "2026-06-05", "title": "AI機殼飆股新星誕生！振發(5426) 連拉三根進逼漲停翻身高效能運算機構件 - 理財周刊", "source": "理財周刊"}, {"date": "2026-06-08", "title": "快訊》4檔台股處置股新名單曝！「1妖股」暴跌近60%抓去關，明起處置到6/23 - 風傳媒", "source": "風傳媒"}, {"date": "2026-06-08", "title": "【09:22 即時新聞】振發(5426)股價上攻逾8%，受AI伺服器散熱與低軌衛星題材加持，多方主力連日進駐推動短線多頭結構 - CMoney投資網誌", "source": "CMoney投資網誌"}, {"date": "2026-06-09", "title": "處置股追蹤 0609／今日新增 4 檔，來億-KY、好德、振發新入列，今日出關國巨、大毅、大量股價再強攻漲停｜股市話題 - sinotrade.com.tw", "source": "sinotrade.com.tw"}, {"date": "2026-06-11", "title": "振發(5426)- - 券商分點進出買賣統計 - 股市爆料同學會 - CMoney", "source": "CMoney"}, {"date": "2026-06-11", "title": "討論牆 | 盤中速報 - 振發(5426)股價殺至跌停，跌停價32.45元，成交4,488張 - LINE TODAY", "source": "LINE TODAY"}, {"date": "2026-06-15", "title": "【12:45 即時新聞】振發(5426)亮燈漲停35.6元，AI伺服器機殼題材發酵＋均線多頭結構吸引資金迴流 - CMoney投資網誌", "source": "CMoney投資網誌"}, {"date": "2026-06-16", "title": "【12:15 即時新聞】振發(5426)股價勁揚站上37元上方，AI伺服器機殼題材發酵＋多頭均線結構與法人買盤支撐 - CMoney投資網誌", "source": "CMoney投資網誌"}, {"date": "2026-06-16", "title": "5426 振發- 賣美債台股買台股唯一5.4%類定存股避通膨AI泡沫當資產配置- 股市爆料同學會 - CMoney", "source": "CMoney"}]}, "3362": {"name": "先進光", "stock_events": [{"date": "2026-06-04", "title": "先進光攻 CPO 爭取與大股東大立光產品搭配送樣 - 經濟日報", "source": "經濟日報"}, {"date": "2026-06-16", "title": "今日漲停股｜AI高速光通訊、光學鏡頭與被動元件百花齊放！全新、今國光、先進光強勢鎖漲停 0616 - sinotrade.com.tw", "source": "sinotrade.com.tw"}, {"date": "2026-06-16", "title": "1圖懂》大立光上看6250元！CPO為何是光學3王新戰場玉晶光、先進光誰更有潛力？專家完整評- 上市櫃 - 旺得富理財網", "source": "旺得富理財網"}, {"date": "2026-06-16", "title": "【09:50 即時新聞】先進光(3362)亮燈漲停至194元，CPO題材資金追捧＋主力與法人偏多佈局助攻續強 - CMoney", "source": "CMoney"}, {"date": "2026-06-16", "title": "光學雙雄攜手亮燈！大立光、先進光飆漲停 引爆「大帶小」 外溢效應 - 理財周刊", "source": "理財周刊"}, {"date": "2026-06-16", "title": "《光電股》注意股：先進光 近5日漲24.76% - 富聯網", "source": "富聯網"}]}, "5227": {"name": "立凱-KY", "stock_events": [{"date": "2026-06-11", "title": "立凱-KY傳迎特斯拉訂單，估2027年下半年出貨- 新聞 - MoneyDJ", "source": "MoneyDJ"}, {"date": "2026-06-11", "title": "立凱-KY拿下特斯拉長單 擬斥資3億元建廠、明年出貨 - news.cnyes.com", "source": "news.cnyes.com"}, {"date": "2026-06-11", "title": "北美LFP非紅色供應鏈成形 立凱KY(5227)大單背後的產業變局 - 優分析UAnalyze", "source": "優分析UAnalyze"}, {"date": "2026-06-11", "title": "立凱傳奪特斯拉大單 - 經濟日報", "source": "經濟日報"}, {"date": "2026-06-12", "title": "【09:19 即時新聞】立凱-KY(5227)亮燈漲停30.9元，北美長約與現增建LFP新產線點火，短線技術噴出搭配主力持續偏多 - CMoney投資網誌", "source": "CMoney投資網誌"}, {"date": "2026-06-16", "title": "討論牆 | 盤中速報 - 立凱-KY(5227)股價拉至漲停，漲停價33.95元，成交201張 - LINE TODAY", "source": "LINE TODAY"}, {"date": "2026-06-16", "title": "美祭「排中條款」！台廠電池鏈迎轉單大紅利 立凱、台達電、新普均獲點名 - FTNN 新聞", "source": "FTNN 新聞"}, {"date": "2026-06-16", "title": "5227 立凱-KY - 六月4千點獲利😇月月千點入袋💕避險作帳買超跌股🌟 - 股市爆料同學會 - CMoney", "source": "CMoney"}, {"date": "2026-06-16", "title": "《電零組》注意股：立凱-KY 近5日漲25.74% - 富聯網", "source": "富聯網"}]}, "4542": {"name": "科嶠", "stock_events": [{"date": "2026-05-21", "title": "【10:02 即時新聞】科嶠(4542)亮燈漲停至259.5元，受裝置成長想像推升買盤，主力近5日由空翻多助攻走勢轉強 - CMoney投資網誌", "source": "CMoney投資網誌"}, {"date": "2026-05-26", "title": "科嶠獲利／自結4月EPS 0.15元 - UDN", "source": "UDN"}, {"date": "2026-06-07", "title": "4542 科嶠- 週一怎麼看- 股市爆料同學會 - CMoney", "source": "CMoney"}, {"date": "2026-06-09", "title": "【12:31 即時新聞】科嶠(4542)攻上漲停345.5元，半導體載具清洗與營收成長加持＋主力外資同步買超推升多頭結構 - CMoney投資網誌", "source": "CMoney投資網誌"}, {"date": "2026-06-12", "title": "【06/12處置股公告】科嶠(4542) 06/12到06/26列入處置股，採20分盤交易 - CMoney", "source": "CMoney"}, {"date": "2026-06-12", "title": "【11:20 即時新聞】科嶠(4542)亮燈漲停335.5元，短線資金搶題材搭配前期主力偏多佈局支撐 - CMoney投資網誌", "source": "CMoney投資網誌"}, {"date": "2026-06-12", "title": "討論牆 | 盤中速報 - 科嶠(4542)急拉3.96%報315.0元，成交914張 - LINE TODAY", "source": "LINE TODAY"}, {"date": "2026-06-13", "title": "討論牆 | 盤中速報 - 科嶠(4542)股價拉至漲停，漲停價335.5元，成交377張 - LINE TODAY", "source": "LINE TODAY"}, {"date": "2026-06-16", "title": "《電零組》注意股：科嶠 近5日漲14.47% - 富聯網", "source": "富聯網"}]}, "3285": {"name": "微端", "stock_events": [{"date": "2026-06-10", "title": "【2026/05月營收公告】微端(3285) 五月營收1.41億元，表現亮眼、呈現雙成長，年增216.75％ - CMoney", "source": "CMoney"}, {"date": "2026-06-10", "title": "營收：微端(3285)5月營收1億4144萬元，月增率93.54%，年增率216.75% - 富聯網", "source": "富聯網"}, {"date": "2026-06-11", "title": "子公司PCB設備挹注大，微端今年營運樂觀看待- 新聞 - MoneyDJ", "source": "MoneyDJ"}, {"date": "2026-06-11", "title": "討論牆 | 盤中速報 - 微端(3285)急拉4.93%報31.9元，成交45張 - LINE TODAY", "source": "LINE TODAY"}, {"date": "2026-06-14", "title": "討論牆 | 盤中速報 - 微端(3285)股價拉至漲停，漲停價41.4元，成交211張 - LINE TODAY", "source": "LINE TODAY"}, {"date": "2026-06-15", "title": "微端今年展望看樂觀；數位音效產品合作品牌大廠- 新聞 - MoneyDJ", "source": "MoneyDJ"}, {"date": "2026-06-16", "title": "《其他電》注意股：微端 近5日漲47.67% - 富聯網", "source": "富聯網"}]}, "3441": {"name": "聯一光", "stock_events": [{"date": "2026-05-20", "title": "股東會通過0.85元現金股利分配案！「這光學廠」今年營運有望呈雙位數成長 跳空漲停 - Yahoo股市", "source": "Yahoo股市"}, {"date": "2026-05-25", "title": "聯一光車載/醫療需求擴大，接單能見度提升 - 台視全球資訊網", "source": "台視全球資訊網"}, {"date": "2026-06-11", "title": "今日漲停股｜被動元件、光學與AI基建領軍，聯一光、晶技、信昌電強勢攻頂0611｜豐雲學堂2026 年 06 月 - sinotrade.com.tw", "source": "sinotrade.com.tw"}, {"date": "2026-06-15", "title": "聯一光(3441) 個股概覽 | 個股 - 股市 - CMoney", "source": "CMoney"}, {"date": "2026-06-15", "title": "【0615台股盤前】費半狂飆7% 助攻台股千點大反撲，下周台股會V轉嗎?外本比排行:環宇-KY (4991)、訊芯-KY (6451)、聯一光(3441)｜豐雲學堂2026 年 06 月 - sinotrade.com.tw", "source": "sinotrade.com.tw"}, {"date": "2026-06-16", "title": "討論牆 | 盤中速報 - 聯一光(3441)急拉4.53%報73.7元，成交2,298張 - LINE TODAY", "source": "LINE TODAY"}, {"date": "2026-06-16", "title": "「光學」低檔出發 還有哪些北上列車蓄勢待發? - 華冠投顧", "source": "華冠投顧"}]}, "3550": {"name": "聯穎", "stock_events": [{"date": "2026-05-29", "title": "3550 聯穎- 本質工控、車用線材及AI 伺服器高速傳輸線材、資料中心佈線等-股市爆料同學會 - CMoney", "source": "CMoney"}, {"date": "2026-06-05", "title": "聯穎Q2營收可望維持雙增拚近年高，毛利率續揚- 新聞 - MoneyDJ", "source": "MoneyDJ"}, {"date": "2026-06-05", "title": "營收速報 - 聯穎(3550)5月營收3.92億元年增率高達36.57％｜新聞快訊｜豐雲學堂 - sinotrade.com.tw", "source": "sinotrade.com.tw"}, {"date": "2026-06-11", "title": "聯穎4月自結損益年增189% EPS0.24元賺贏Q1 - news.cnyes.com", "source": "news.cnyes.com"}, {"date": "2026-06-12", "title": "聯穎4月EPS 0.24元，單月賺贏Q1 - 台視全球資訊網", "source": "台視全球資訊網"}, {"date": "2026-06-13", "title": "討論牆 | 盤中速報 - 聯穎(3550)急拉3.5%報28.1元，成交4,609張 - LINE TODAY", "source": "LINE TODAY"}, {"date": "2026-06-16", "title": "《電零組》注意股：聯穎 近5日漲19.11% - 富聯網", "source": "富聯網"}, {"date": "2026-06-16", "title": "【09:36 即時新聞】聯穎(3550)亮燈漲停至30.85元，AI高速線題材發酵＋前期主力吸納推升多頭結構 - CMoney投資網誌", "source": "CMoney投資網誌"}]}, "2478": {"name": "大毅", "stock_events": [{"date": "2026-05-28", "title": "【13:20 即時新聞】大毅(2478)股價勁揚逾5%至127元，被動元件強勢題材發酵＋前期主力高檔佈局成支撐 - CMoney", "source": "CMoney"}, {"date": "2026-05-29", "title": "處置股追蹤 0526／今日新增 10 檔，國巨、大毅、昇達科首入列，禾伸堂、大量再遭二度處置｜股市話題 - sinotrade.com.tw", "source": "sinotrade.com.tw"}, {"date": "2026-05-30", "title": "2478 大毅 - 經過20年了！ 國巨會不會再來併購ㄧ次！ -股市爆料同學會 - CMoney", "source": "CMoney"}, {"date": "2026-06-09", "title": "狂吃AI主板高階電阻！大毅(2478) 處置解禁首日爆量衝漲停 - 理財周刊", "source": "理財周刊"}, {"date": "2026-06-11", "title": "2478 大毅- 不可輕忽，不可大易- 股市爆料同學會 - CMoney", "source": "CMoney"}, {"date": "2026-06-11", "title": "最牛一輪／大毅犀利 台新5C 叫好 - UDN", "source": "UDN"}, {"date": "2026-06-16", "title": "【10:57 即時新聞】大毅(2478)亮燈漲停至207元，被動元件漲價＋外資連續回補推升多頭氣勢 - CMoney投資網誌", "source": "CMoney投資網誌"}]}, "5468": {"name": "凱鈺", "stock_events": [{"date": "2026-05-28", "title": "凱鈺(5468)- - 券商分點進出買賣統計 - 股市爆料同學會 - CMoney", "source": "CMoney"}, {"date": "2026-06-09", "title": "【2026/05月營收公告】凱鈺(5468) 五月營收表現亮眼、呈現雙成長，創近2個月以來新高，年增34.63% - CMoney投資網誌", "source": "CMoney投資網誌"}, {"date": "2026-06-10", "title": "凱鈺人形機器人出擊 - 經濟日報", "source": "經濟日報"}, {"date": "2026-06-10", "title": "凱鈺推首款人形機器人，跨足具身智能領域- 新聞 - MoneyDJ", "source": "MoneyDJ"}, {"date": "2026-06-10", "title": "5468 凱鈺- 凱鈺由IC設計轉型多元化經營有成推出首款人形機器人- 股市爆料同學會 - CMoney", "source": "CMoney"}, {"date": "2026-06-12", "title": "討論牆 | 盤中速報 - 凱鈺(5468)股價拉至漲停，漲停價19.8元，成交210張 - LINE TODAY", "source": "LINE TODAY"}, {"date": "2026-06-16", "title": "【10:53 即時新聞】凱鈺(5468)亮燈漲停至26.25元，機器人＋智慧製造題材發酵、主力波段買盤推動短多氣勢 - CMoney投資網誌", "source": "CMoney投資網誌"}, {"date": "2026-06-16", "title": "《半導體》注意股：凱鈺 近5日漲36.96% - 富聯網", "source": "富聯網"}]}, "2883": {"name": "凱基金", "stock_events": [{"date": "2026-06-02", "title": "〈凱基金法說〉凱壽前4月股海賺近200億元 明年股利新計算基準出爐 - Yahoo股市", "source": "Yahoo股市"}, {"date": "2026-06-03", "title": "25分鐘直衝漲停！凱基金（2883）為何創下24年股價新高？ 拆解三大獲利關鍵與股利政策 - 風傳媒", "source": "風傳媒"}, {"date": "2026-06-03", "title": "獲利狂飆3倍凱基金股價攻漲停法人喊出最新目標價- 證券 - 工商時報", "source": "工商時報"}, {"date": "2026-06-12", "title": "凱基金通過發放現金股利1元 創5年最高配發率 - 自由財經", "source": "自由財經"}, {"date": "2026-06-14", "title": "營收速報 - 凱基金(2883)5月營收115.84億元年增率高達126.09％｜新聞快訊｜豐雲學堂 - sinotrade.com.tw", "source": "sinotrade.com.tw"}, {"date": "2026-06-15", "title": "6/15台股交易回顧｜凱基金(2883)漲勢驚人-林恩如 - CMoney投資網誌", "source": "CMoney投資網誌"}, {"date": "2026-06-15", "title": "【2026/05月營收公告】凱基金(2883) 五月持平 - CMoney", "source": "CMoney"}, {"date": "2026-06-15", "title": "高殖利率金控股超人氣 國泰、凱基、中信、富邦有望衝破4.5% - 經濟日報", "source": "經濟日報"}]}, "2887": {"name": "台新新光金", "stock_events": [{"date": "2026-06-11", "title": "71萬股東看過來！台新新光金前5月獲利348億元年增四倍 - Yahoo股市", "source": "Yahoo股市"}, {"date": "2026-06-12", "title": "台新新光金併後首場股東會！銀行二合一力拚年底完成 吳東亮首談組職棒隊 - news.cnyes.com", "source": "news.cnyes.com"}, {"date": "2026-06-15", "title": "Factset 最新調查：台新新光金(2887-TW)目標價調升至24.8元，幅度約14.81%｜新聞快訊｜豐雲學堂 - sinotrade.com.tw", "source": "sinotrade.com.tw"}, {"date": "2026-06-15", "title": "台新新光金狂牛來了！大金主是「他們」 放量狂噴71萬股東天天吃大餐 - 自由財經", "source": "自由財經"}, {"date": "2026-06-15", "title": "個股／快檢查！你有買嗎？ 台新新光金目標價 - 三立新聞網SETN.com", "source": "三立新聞網SETN.com"}, {"date": "2026-06-15", "title": "【06/15券商評等報告彙整】台新新光金(2887) 今日僅1家券商發布績效評等報告，評價為中立，目標價為30元。 - CMoney投資網誌", "source": "CMoney投資網誌"}, {"date": "2026-06-16", "title": "2887 台新新光金- 台新證券邁入「兆元投信」💪💪 大幅躍升至國內投信前段班- 股市爆料同學會 - CMoney", "source": "CMoney"}, {"date": "2026-06-16", "title": "台新新光金首季狂賺210億！法人卻不買單直指1關鍵讓配息卡關- 上市櫃 - 旺得富理財網", "source": "旺得富理財網"}, {"date": "2026-06-16", "title": "台新新光金、長榮航 熱 - 經濟日報", "source": "經濟日報"}, {"date": "2026-06-16", "title": "2887 台新新光金 - 兆元投信是在綠什麼🤠🤠 - 股市爆料同學會 - CMoney", "source": "CMoney"}]}, "2882": {"name": "國泰金", "stock_events": [{"date": "2026-05-28", "title": "國泰金法說》談明年股利 李長庚：相當樂觀 國壽股票未實現獲利破2700億元 - Yahoo股市", "source": "Yahoo股市"}, {"date": "2026-06-16", "title": "2882 國泰金- 存股族注意2官股金控入選大咖法人13選4 目標價殖利率1次看- 股市爆料同學會 - CMoney", "source": "CMoney"}, {"date": "2026-06-16", "title": "富邦金、國泰金帶頭衝！6金控飆新高　狂催除息行情 - ETtoday財經雲", "source": "ETtoday財經雲"}, {"date": "2026-06-16", "title": "存股族注意了！不是富邦金、中信金2官股金控入選大咖法人「13選4」 目標價、殖利率1次看- 上市櫃 - 旺得富理財網", "source": "旺得富理財網"}, {"date": "2026-06-16", "title": "〈焦點股〉「隱形獲利」引爆價值補漲 國泰、凱基壽險型金控集體大翻身 - news.cnyes.com", "source": "news.cnyes.com"}, {"date": "2026-06-16", "title": "【12:32 即時新聞】國泰金(2882)股價勁揚至109元、上漲4.81%，金融權值買盤點火＋多頭格局延伸主力與法人同步偏多 - CMoney投資網誌", "source": "CMoney投資網誌"}]}, "2881": {"name": "富邦金", "stock_events": [{"date": "2026-06-12", "title": "富邦金股東會》蔡明興為股價抱屈「現在蠻低的」 明年股利有望比今年更高 - Yahoo股市", "source": "Yahoo股市"}, {"date": "2026-06-16", "title": "Factset 最新調查：富邦金(2881-TW)EPS預估上修至10.09元，預估目標價為104元｜新聞快訊｜豐雲學堂 - sinotrade.com.tw", "source": "sinotrade.com.tw"}]}, "2890": {"name": "永豐金", "stock_events": [{"date": "2026-05-25", "title": "永豐金股東會完成改選並通過1.3元股利 總座朱士廷：明年第1季併京城銀 - Yahoo股市", "source": "Yahoo股市"}, {"date": "2026-06-08", "title": "營收速報 - 永豐金(2890)5月營收99.77億元年增率高達82.69％｜新聞快訊｜豐雲學堂 - sinotrade.com.tw", "source": "sinotrade.com.tw"}, {"date": "2026-06-13", "title": "2890 永豐金 - 【永豐金(2890)盤後解析】外資狂敲，價量齊揚攻高 永豐金... - 股市爆料同學會 - CMoney", "source": "CMoney"}, {"date": "2026-06-15", "title": "【06/15 申報轉讓】永豐金(2890)子公司經理人楊健閣於15日申報轉讓永豐金股票84.21張-CMoney 小編 - CMoney投資網誌", "source": "CMoney投資網誌"}, {"date": "2026-06-16", "title": "2890 永豐金 - 【永豐金(2890)盤後解析】外資連買降溫，高檔量縮整理 ... - 股市爆料同學會 - CMoney", "source": "CMoney"}]}, "2851": {"name": "中再保", "stock_events": [{"date": "2026-05-25", "title": "股票投資「錦上添花」 中再保114年大賺29.3億元、7成來自投資收益 - 自由財經", "source": "自由財經"}, {"date": "2026-05-25", "title": "中再保股東會》幸福企業！ 基層加薪最高7% 總座：人才招募不易 - Yahoo股市", "source": "Yahoo股市"}, {"date": "2026-05-26", "title": "中再保董座 鍾志宏出任 - 經濟日報", "source": "經濟日報"}, {"date": "2026-05-28", "title": "中再保訂5/29召開法說會 - CMoney", "source": "CMoney"}, {"date": "2026-06-16", "title": "【13:19 即時新聞】中再保(2851)股價上漲逾4%來到39.7元，高殖利率防禦題材受資金青睞＋技術面多頭排列推升趨勢延續 - CMoney投資網誌", "source": "CMoney投資網誌"}, {"date": "2026-06-16", "title": "中再保領跑產險獲利潮，核保/投資引擎驅動營運 - 台視全球資訊網", "source": "台視全球資訊網"}]}, "2892": {"name": "第一金", "stock_events": [{"date": "2026-06-02", "title": "〈第一金法說〉最強首季大賺82.44億元 擬配1.3元股利配發率7成創6年新高 - Yahoo股市", "source": "Yahoo股市"}, {"date": "2026-06-12", "title": "公股4金2銀前5月猛賺735億成長飆4成華南金年增73%奪冠第一金單月最賺｜新聞快訊｜豐雲學堂 - sinotrade.com.tw", "source": "sinotrade.com.tw"}, {"date": "2026-06-15", "title": "第一金、華南金誰更強？獲利、EPS 一路拚到股價 - UDN", "source": "UDN"}, {"date": "2026-06-15", "title": "第一金獲利動能擴大，上修今年放款成長目標 - 台視全球資訊網", "source": "台視全球資訊網"}, {"date": "2026-06-16", "title": "2892 第一金 - 【第一金(2892)盤後解析】投信萬張大買，籌碼高度集中 ... - 股市爆料同學會 - CMoney", "source": "CMoney"}, {"date": "2026-06-16", "title": "第一金衝18年新高！最大買家是「他們」 45萬股東吃香喝辣 - 自由財經", "source": "自由財經"}, {"date": "2026-06-16", "title": "《台北股市》投信16日買超股：第一金、遠東新、聯電 - 富聯網", "source": "富聯網"}, {"date": "2026-06-16", "title": "千億級00713飆天價！換股增刪15檔 砍富邦金、凱基金轉進第一金 - ETtoday財經雲", "source": "ETtoday財經雲"}]}, "2801": {"name": "彰銀", "stock_events": [{"date": "2026-05-25", "title": "2801 彰銀 - 【彰銀(2801)盤後解析】外資連日賣超，投信逆勢承接 今... - 股市爆料同學會 - CMoney", "source": "CMoney"}, {"date": "2026-05-26", "title": "〈彰銀法說〉財管海外雙翅膀帶飛！彰銀首季EPS 0.44元 擬配股利1.05元創新高 - news.cnyes.com", "source": "news.cnyes.com"}, {"date": "2026-05-26", "title": "彰銀法說會／首季獲利飆新高 喊前進亞利桑那州 - 經濟日報", "source": "經濟日報"}, {"date": "2026-05-27", "title": "2801 彰銀- 持續買進彰銀，彎腰撿鑽石💎-股市爆料同學會 - CMoney", "source": "CMoney"}, {"date": "2026-06-09", "title": "2801 彰銀 - 【彰銀(2801)盤後解析】外資逆勢連買，籌碼集中 今天大... - 股市爆料同學會 - CMoney", "source": "CMoney"}, {"date": "2026-06-10", "title": "△個股：彰銀(2801)統籌主辦耐斯廣場31.6億元聯貸案完成簽約 - 富聯網", "source": "富聯網"}, {"date": "2026-06-11", "title": "彰銀響應企業投資美國融資保證機制 承諾2,500萬美元助台商布局 - UDN", "source": "UDN"}]}, "2891": {"name": "中信金", "stock_events": [{"date": "2026-05-28", "title": "中信金（2891）衝60元！不敗教主陳重銘：10幾年來領息賺價差皆超千萬| 台股雜談| 股市 - UDN", "source": "UDN"}, {"date": "2026-06-03", "title": "【13:09 即時新聞】中信金(2891)攻上漲停70.5元，高息ETF納入帶動買盤追價＋主力與投信連續加碼推升技術多頭格局 - CMoney投資網誌", "source": "CMoney投資網誌"}, {"date": "2026-06-04", "title": "中信金（2891）狂飆70.5元歷史天價！陳重銘驚吐「沒想過這麼快」：極其漂亮的獲利表現| 台股雜談| 股市 - UDN", "source": "UDN"}, {"date": "2026-06-11", "title": "營收速報 - 中信金(2891)5月營收192.18億元年增率高達341.32％｜新聞快訊｜豐雲學堂 - sinotrade.com.tw", "source": "sinotrade.com.tw"}, {"date": "2026-06-11", "title": "富邦金(2881)、中信金(2891)、元大金(2885)全賣了！存股達人只留「這2檔」賺最強現金流...金融股10年不敗心法 - 今周刊", "source": "今周刊"}, {"date": "2026-06-12", "title": "57萬股東笑了！中信金前5月大賺347億 豪發2.5元現金股利創新高 - Yahoo股市", "source": "Yahoo股市"}, {"date": "2026-06-12", "title": "〈中信金股東會〉通過配息2.5元創高！總座：證券持續尋求併購機會 - news.cnyes.com", "source": "news.cnyes.com"}, {"date": "2026-06-12", "title": "【營收快訊】中信金(2891)公告05月營收 - CMoney", "source": "CMoney"}, {"date": "2026-06-12", "title": "中信金證券事業火熱　總座：尋求擴張併購機會 - ETtoday財經雲", "source": "ETtoday財經雲"}]}, "5864": {"name": "致和證", "stock_events": [{"date": "2026-05-27", "title": "台股焦點：致和證(5864.TW) - 台視全球資訊網", "source": "台視全球資訊網"}, {"date": "2026-05-27", "title": "【09:42 即時新聞】致和證(5864)攻上漲停38.6元，受惠券商族群走強＋外資回補推升技術多頭結構 - CMoney", "source": "CMoney"}, {"date": "2026-05-27", "title": "致和證(5864)- - 券商分點進出買賣統計-股市爆料同學會 - CMoney", "source": "CMoney"}, {"date": "2026-05-28", "title": "4月單月狂賺近4元！致和證(5864) 自營大爆發飆天價 - 理財周刊", "source": "理財周刊"}, {"date": "2026-05-29", "title": "5864 致和證- 複利的威力，讓時間替你賺錢-股市爆料同學會 - CMoney", "source": "CMoney"}, {"date": "2026-06-02", "title": "5864 致和證 - 明天想賣零股-股市爆料同學會 - CMoney", "source": "CMoney"}, {"date": "2026-06-05", "title": "【13:16 即時新聞】致和證(5864)股價上漲逾4%至52.9元，受券商獲利與制度利多加持＋多頭趨勢下主力與散戶同步偏多 - CMoney投資網誌", "source": "CMoney投資網誌"}, {"date": "2026-06-12", "title": "【12:00 即時新聞】致和證(5864)攻上漲停47.25元，受惠券商族群資金迴流＋技術面多頭結構支撐 - CMoney投資網誌", "source": "CMoney投資網誌"}, {"date": "2026-06-15", "title": "個股：致和證(5864)6/16受邀參加統一證券國際法人部舉辦之線上法人說明會 - 富聯網", "source": "富聯網"}]}};
+
+function showEvents(code, name) {
+    const data = EVENTS_DATA[code];
+    if (!data) {
+        alert('该公司事件资料不存在: ' + code);
+        return;
+    }
+    document.getElementById('modalTitle').textContent = code + ' ' + name + ' — 完整事件列表';
+    
+    const body = document.getElementById('modalBody');
+    body.innerHTML = '';
+    
+    if (!data.stock_events || data.stock_events.length === 0) {
+        body.innerHTML = '<p style="color: #6b7280; padding: 16px;">该公司期间内未抓到特定事件。</p>';
+    } else {
+        data.stock_events.forEach(ev => {
+            const row = document.createElement('div');
+            row.className = 'event-row';
+            const sourceTag = ev.source ? `<span class="event-source">${ev.source}</span>` : '';
+            row.innerHTML = `
+                <div class="event-date">${ev.date}</div>
+                <div class="event-title">${ev.title}${sourceTag}</div>
+            `;
+            body.appendChild(row);
+        });
+    }
+    
+    // 底部超链接
+    const footer = document.getElementById('modalFooter');
+    footer.innerHTML = `
+        <a href="events_by_company.md#${code}-${name}" class="modal-link" target="_blank">
+            📄 在 events_by_company.md 中查看完整资料 (含关键观察)
+        </a>
+        <p style="color:#9ca3af;font-size:11px;margin-top:8px;">
+            点击上面按钮将以 Markdown 完整档案开启该公司的完整章节。
+        </p>
+    `;
+    
+    document.getElementById('modal').classList.add('active');
+}
+
+function closeModal() {
+    document.getElementById('modal').classList.remove('active');
+}
+
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeModal();
+});
+</script>
+
+
+<div class="footer" id="footer">
+<strong>📁 相关档案</strong> (位于 <code>hermes_projects/twse_analysis_2026_06_16/</code>)<br>
+• <code>index.html</code> — 本整合档 (HTML 互动表 + 趋势图)<br>
+• <code>events_by_company.md</code> — 完整事件报告 (含每家公司关键观察)<br>
+• <code>events_report.md</code> — 旧版事件报告<br>
+• <code>report.md</code> — 原始 Top10 报告<br>
+• <code>top10_returns.json</code> — 结构化涨幅资料<br>
+• <code>all_events.json</code> — 290 笔原始事件<br>
+• <code>events_for_popup.json</code> — 弹窗用事件 JSON<br>
+• <code>charts/</code> — 20 档量价图<br>
+• <code>charts_ma/</code> — 20 档均线图 + 6 张板块汇总图<br><br>
+
+<strong>免责声名</strong>：本报告整理公开新闻事件与股价资料交叉对照，<strong>不构成投资建议</strong>。<br>
+<strong>报告生成</strong>：2026-06-17 17:26
+</div>
+</div>
+</body>
+</html>

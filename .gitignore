@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+._*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# 抓取暂存
+*.pkl
+*.tmp
