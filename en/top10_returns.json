@@ -1,0 +1,3830 @@
+{
+  "as_of": "2026-06-16 Close后",
+  "data_source": "TWSE TWSE Listed + TPEx 上柜 (openapi.twse.com.tw + twstock 1.5.1)",
+  "metric": "近 10 个交易日累计Return (%) (%) = (2026/06/16 Close / Base Date Close - 1) × 100%",
+  "window_definition": "最近 10 个交易日 (含 2026/06/16)，Base Date为往前数第 11 个交易日Close",
+  "electronic": [
+    {
+      "code": "Punch Industrial (Yang Bor)",
+      "name": "揚博",
+      "group": "Electronic Components",
+      "market": "TWSE Listed",
+      "date_base": "2026-06-02",
+      "date_today": "2026-06-16",
+      "close_base": 147.0,
+      "close_today": 250.0,
+      "pct_10d": 70.06802721088435,
+      "last_5d": [
+        {
+          "date": "2026-06-10",
+          "open": 166.0,
+          "high": 185.5,
+          "low": 163.5,
+          "close": 180.5,
+          "change": 11.5,
+          "capacity": 13303736,
+          "turnover": 2417940648,
+          "transaction": 9890
+        },
+        {
+          "date": "2026-06-11",
+          "open": 186.5,
+          "high": 192.0,
+          "low": 168.0,
+          "close": 188.5,
+          "change": 8.0,
+          "capacity": 14278232,
+          "turnover": 2584582419,
+          "transaction": 13504
+        },
+        {
+          "date": "2026-06-12",
+          "open": 207.0,
+          "high": 207.0,
+          "low": 207.0,
+          "close": 207.0,
+          "change": 18.5,
+          "capacity": 2561134,
+          "turnover": 530154738,
+          "transaction": 1955
+        },
+        {
+          "date": "2026-06-15",
+          "open": 227.5,
+          "high": 227.5,
+          "low": 227.5,
+          "close": 227.5,
+          "change": 20.5,
+          "capacity": 711933,
+          "turnover": 161964681,
+          "transaction": 837
+        },
+        {
+          "date": "2026-06-16",
+          "open": 250.0,
+          "high": 250.0,
+          "low": 240.0,
+          "close": 250.0,
+          "change": 22.5,
+          "capacity": 8089645,
+          "turnover": 2015884539,
+          "transaction": 4474
+        }
+      ],
+      "all_valid": [
+        {
+          "date": "2026-06-02",
+          "open": 154.0,
+          "high": 156.5,
+          "low": 146.0,
+          "close": 147.0,
+          "change": -6.0,
+          "capacity": 2801331,
+          "turnover": 419303861,
+          "transaction": 4171
+        },
+        {
+          "date": "2026-06-03",
+          "open": 150.0,
+          "high": 161.5,
+          "low": 149.5,
+          "close": 161.5,
+          "change": 14.5,
+          "capacity": 6004976,
+          "turnover": 951313772,
+          "transaction": 4547
+        },
+        {
+          "date": "2026-06-04",
+          "open": 161.0,
+          "high": 177.5,
+          "low": 159.0,
+          "close": 177.5,
+          "change": 16.0,
+          "capacity": 11657187,
+          "turnover": 2030829915,
+          "transaction": 8702
+        },
+        {
+          "date": "2026-06-05",
+          "open": 177.0,
+          "high": 190.5,
+          "low": 171.0,
+          "close": 178.0,
+          "change": 0.5,
+          "capacity": 18953612,
+          "turnover": 3419317883,
+          "transaction": 14972
+        },
+        {
+          "date": "2026-06-08",
+          "open": 160.5,
+          "high": 166.0,
+          "low": 160.5,
+          "close": 164.0,
+          "change": -14.0,
+          "capacity": 4903808,
+          "turnover": 796037692,
+          "transaction": 6728
+        },
+        {
+          "date": "2026-06-09",
+          "open": 165.0,
+          "high": 171.5,
+          "low": 155.0,
+          "close": 169.0,
+          "change": 5.0,
+          "capacity": 6393139,
+          "turnover": 1055989728,
+          "transaction": 5421
+        },
+        {
+          "date": "2026-06-10",
+          "open": 166.0,
+          "high": 185.5,
+          "low": 163.5,
+          "close": 180.5,
+          "change": 11.5,
+          "capacity": 13303736,
+          "turnover": 2417940648,
+          "transaction": 9890
+        },
+        {
+          "date": "2026-06-11",
+          "open": 186.5,
+          "high": 192.0,
+          "low": 168.0,
+          "close": 188.5,
+          "change": 8.0,
+          "capacity": 14278232,
+          "turnover": 2584582419,
+          "transaction": 13504
+        },
+        {
+          "date": "2026-06-12",
+          "open": 207.0,
+          "high": 207.0,
+          "low": 207.0,
+          "close": 207.0,
+          "change": 18.5,
+          "capacity": 2561134,
+          "turnover": 530154738,
+          "transaction": 1955
+        },
+        {
+          "date": "2026-06-15",
+          "open": 227.5,
+          "high": 227.5,
+          "low": 227.5,
+          "close": 227.5,
+          "change": 20.5,
+          "capacity": 711933,
+          "turnover": 161964681,
+          "transaction": 837
+        },
+        {
+          "date": "2026-06-16",
+          "open": 250.0,
+          "high": 250.0,
+          "low": 240.0,
+          "close": 250.0,
+          "change": 22.5,
+          "capacity": 8089645,
+          "turnover": 2015884539,
+          "transaction": 4474
+        }
+      ]
+    },
+    {
+      "code": "Zhen Fa",
+      "name": "振發",
+      "group": "Computer & Peripheral Equipment",
+      "market": "TPEx (OTC) Listed",
+      "date_base": "2026-06-02",
+      "date_today": "2026-06-16",
+      "close_base": 22.55,
+      "close_today": 37.55,
+      "pct_10d": 66.51884700665187,
+      "last_5d": [
+        {
+          "date": "2026-06-10",
+          "open": 35.3,
+          "high": 35.4,
+          "low": 32.45,
+          "close": 32.45,
+          "change": -3.6,
+          "capacity": 5084000,
+          "turnover": 169763000,
+          "transaction": 3568
+        },
+        {
+          "date": "2026-06-11",
+          "open": 33.7,
+          "high": 33.7,
+          "low": 29.3,
+          "close": 32.45,
+          "change": 0.0,
+          "capacity": 2582000,
+          "turnover": 80623000,
+          "transaction": 1743
+        },
+        {
+          "date": "2026-06-12",
+          "open": 31.55,
+          "high": 32.8,
+          "low": 31.55,
+          "close": 32.4,
+          "change": -0.05,
+          "capacity": 1677000,
+          "turnover": 53931000,
+          "transaction": 1276
+        },
+        {
+          "date": "2026-06-15",
+          "open": 34.0,
+          "high": 35.6,
+          "low": 33.0,
+          "close": 35.6,
+          "change": 3.2,
+          "capacity": 3016000,
+          "turnover": 104156000,
+          "transaction": 2131
+        },
+        {
+          "date": "2026-06-16",
+          "open": 38.5,
+          "high": 39.0,
+          "low": 37.5,
+          "close": 37.55,
+          "change": 1.95,
+          "capacity": 2726000,
+          "turnover": 103994000,
+          "transaction": 2171
+        }
+      ],
+      "all_valid": [
+        {
+          "date": "2026-06-02",
+          "open": 22.55,
+          "high": 22.55,
+          "low": 22.55,
+          "close": 22.55,
+          "change": 2.05,
+          "capacity": 526000,
+          "turnover": 11856000,
+          "transaction": 276
+        },
+        {
+          "date": "2026-06-03",
+          "open": 24.8,
+          "high": 24.8,
+          "low": 24.8,
+          "close": 24.8,
+          "change": 2.25,
+          "capacity": 655000,
+          "turnover": 16247000,
+          "transaction": 313
+        },
+        {
+          "date": "2026-06-04",
+          "open": 27.25,
+          "high": 27.25,
+          "low": 27.25,
+          "close": 27.25,
+          "change": 2.45,
+          "capacity": 1411000,
+          "turnover": 38442000,
+          "transaction": 644
+        },
+        {
+          "date": "2026-06-05",
+          "open": 29.0,
+          "high": 29.95,
+          "low": 28.6,
+          "close": 29.95,
+          "change": 2.7,
+          "capacity": 11345000,
+          "turnover": 335205000,
+          "transaction": 3755
+        },
+        {
+          "date": "2026-06-08",
+          "open": 27.5,
+          "high": 32.9,
+          "low": 27.5,
+          "close": 32.9,
+          "change": 2.95,
+          "capacity": 26128000,
+          "turnover": 826847000,
+          "transaction": 16585
+        },
+        {
+          "date": "2026-06-09",
+          "open": 34.0,
+          "high": 36.05,
+          "low": 34.0,
+          "close": 36.05,
+          "change": 3.15,
+          "capacity": 7296000,
+          "turnover": 255492000,
+          "transaction": 5003
+        },
+        {
+          "date": "2026-06-10",
+          "open": 35.3,
+          "high": 35.4,
+          "low": 32.45,
+          "close": 32.45,
+          "change": -3.6,
+          "capacity": 5084000,
+          "turnover": 169763000,
+          "transaction": 3568
+        },
+        {
+          "date": "2026-06-11",
+          "open": 33.7,
+          "high": 33.7,
+          "low": 29.3,
+          "close": 32.45,
+          "change": 0.0,
+          "capacity": 2582000,
+          "turnover": 80623000,
+          "transaction": 1743
+        },
+        {
+          "date": "2026-06-12",
+          "open": 31.55,
+          "high": 32.8,
+          "low": 31.55,
+          "close": 32.4,
+          "change": -0.05,
+          "capacity": 1677000,
+          "turnover": 53931000,
+          "transaction": 1276
+        },
+        {
+          "date": "2026-06-15",
+          "open": 34.0,
+          "high": 35.6,
+          "low": 33.0,
+          "close": 35.6,
+          "change": 3.2,
+          "capacity": 3016000,
+          "turnover": 104156000,
+          "transaction": 2131
+        },
+        {
+          "date": "2026-06-16",
+          "open": 38.5,
+          "high": 39.0,
+          "low": 37.5,
+          "close": 37.55,
+          "change": 1.95,
+          "capacity": 2726000,
+          "turnover": 103994000,
+          "transaction": 2171
+        }
+      ]
+    },
+    {
+      "code": "Advanced Optoelectronics (Xian Jin Guang)",
+      "name": "先進光",
+      "group": "Optoelectronics",
+      "market": "TPEx (OTC) Listed",
+      "date_base": "2026-06-02",
+      "date_today": "2026-06-16",
+      "close_base": 119.5,
+      "close_today": 194.0,
+      "pct_10d": 62.34309623430963,
+      "last_5d": [
+        {
+          "date": "2026-06-10",
+          "open": 168.0,
+          "high": 171.0,
+          "low": 160.0,
+          "close": 171.0,
+          "change": 15.5,
+          "capacity": 10062000,
+          "turnover": 1704330000,
+          "transaction": 6306
+        },
+        {
+          "date": "2026-06-11",
+          "open": 166.0,
+          "high": 172.0,
+          "low": 160.0,
+          "close": 164.0,
+          "change": -7.0,
+          "capacity": 15907000,
+          "turnover": 2634036000,
+          "transaction": 11448
+        },
+        {
+          "date": "2026-06-12",
+          "open": 168.5,
+          "high": 175.5,
+          "low": 160.0,
+          "close": 160.5,
+          "change": -3.5,
+          "capacity": 11971000,
+          "turnover": 1986843000,
+          "transaction": 11454
+        },
+        {
+          "date": "2026-06-15",
+          "open": 161.5,
+          "high": 176.5,
+          "low": 161.5,
+          "close": 176.5,
+          "change": 16.0,
+          "capacity": 6956000,
+          "turnover": 1196242000,
+          "transaction": 5191
+        },
+        {
+          "date": "2026-06-16",
+          "open": 184.5,
+          "high": 194.0,
+          "low": 178.0,
+          "close": 194.0,
+          "change": 17.5,
+          "capacity": 14495000,
+          "turnover": 2734990000,
+          "transaction": 12062
+        }
+      ],
+      "all_valid": [
+        {
+          "date": "2026-06-02",
+          "open": 127.0,
+          "high": 127.5,
+          "low": 117.5,
+          "close": 119.5,
+          "change": -1.5,
+          "capacity": 2684000,
+          "turnover": 324028000,
+          "transaction": 2383
+        },
+        {
+          "date": "2026-06-03",
+          "open": 118.5,
+          "high": 131.0,
+          "low": 118.5,
+          "close": 131.0,
+          "change": 11.5,
+          "capacity": 3563000,
+          "turnover": 460557000,
+          "transaction": 2971
+        },
+        {
+          "date": "2026-06-04",
+          "open": 144.0,
+          "high": 144.0,
+          "low": 143.5,
+          "close": 144.0,
+          "change": 13.0,
+          "capacity": 1886000,
+          "turnover": 271618000,
+          "transaction": 1594
+        },
+        {
+          "date": "2026-06-05",
+          "open": 152.0,
+          "high": 157.5,
+          "low": 145.5,
+          "close": 148.0,
+          "change": 4.0,
+          "capacity": 16385000,
+          "turnover": 2491493000,
+          "transaction": 13192
+        },
+        {
+          "date": "2026-06-08",
+          "open": 133.5,
+          "high": 145.0,
+          "low": 133.5,
+          "close": 141.5,
+          "change": -6.5,
+          "capacity": 4463000,
+          "turnover": 614259000,
+          "transaction": 4743
+        },
+        {
+          "date": "2026-06-09",
+          "open": 143.0,
+          "high": 155.5,
+          "low": 142.5,
+          "close": 155.5,
+          "change": 14.0,
+          "capacity": 2586000,
+          "turnover": 394151000,
+          "transaction": 1869
+        },
+        {
+          "date": "2026-06-10",
+          "open": 168.0,
+          "high": 171.0,
+          "low": 160.0,
+          "close": 171.0,
+          "change": 15.5,
+          "capacity": 10062000,
+          "turnover": 1704330000,
+          "transaction": 6306
+        },
+        {
+          "date": "2026-06-11",
+          "open": 166.0,
+          "high": 172.0,
+          "low": 160.0,
+          "close": 164.0,
+          "change": -7.0,
+          "capacity": 15907000,
+          "turnover": 2634036000,
+          "transaction": 11448
+        },
+        {
+          "date": "2026-06-12",
+          "open": 168.5,
+          "high": 175.5,
+          "low": 160.0,
+          "close": 160.5,
+          "change": -3.5,
+          "capacity": 11971000,
+          "turnover": 1986843000,
+          "transaction": 11454
+        },
+        {
+          "date": "2026-06-15",
+          "open": 161.5,
+          "high": 176.5,
+          "low": 161.5,
+          "close": 176.5,
+          "change": 16.0,
+          "capacity": 6956000,
+          "turnover": 1196242000,
+          "transaction": 5191
+        },
+        {
+          "date": "2026-06-16",
+          "open": 184.5,
+          "high": 194.0,
+          "low": 178.0,
+          "close": 194.0,
+          "change": 17.5,
+          "capacity": 14495000,
+          "turnover": 2734990000,
+          "transaction": 12062
+        }
+      ]
+    },
+    {
+      "code": "Li-Kai KY",
+      "name": "立凱-KY",
+      "group": "Electronic Components",
+      "market": "TPEx (OTC) Listed",
+      "date_base": "2026-06-02",
+      "date_today": "2026-06-16",
+      "close_base": 24.4,
+      "close_today": 37.3,
+      "pct_10d": 52.86885245901639,
+      "last_5d": [
+        {
+          "date": "2026-06-10",
+          "open": 25.5,
+          "high": 27.2,
+          "low": 25.5,
+          "close": 25.55,
+          "change": -0.95,
+          "capacity": 371000,
+          "turnover": 9735000,
+          "transaction": 373
+        },
+        {
+          "date": "2026-06-11",
+          "open": 25.3,
+          "high": 28.1,
+          "low": 24.8,
+          "close": 28.1,
+          "change": 2.55,
+          "capacity": 833000,
+          "turnover": 22730000,
+          "transaction": 813
+        },
+        {
+          "date": "2026-06-12",
+          "open": 30.9,
+          "high": 30.9,
+          "low": 30.9,
+          "close": 30.9,
+          "change": 2.8,
+          "capacity": 368000,
+          "turnover": 11356000,
+          "transaction": 327
+        },
+        {
+          "date": "2026-06-15",
+          "open": 33.95,
+          "high": 33.95,
+          "low": 33.95,
+          "close": 33.95,
+          "change": 3.05,
+          "capacity": 298000,
+          "turnover": 10102000,
+          "transaction": 318
+        },
+        {
+          "date": "2026-06-16",
+          "open": 37.3,
+          "high": 37.3,
+          "low": 37.3,
+          "close": 37.3,
+          "change": 3.35,
+          "capacity": 486000,
+          "turnover": 18123000,
+          "transaction": 457
+        }
+      ],
+      "all_valid": [
+        {
+          "date": "2026-06-02",
+          "open": 24.7,
+          "high": 24.75,
+          "low": 24.2,
+          "close": 24.4,
+          "change": -0.3,
+          "capacity": 128000,
+          "turnover": 3153000,
+          "transaction": 216
+        },
+        {
+          "date": "2026-06-03",
+          "open": 24.4,
+          "high": 24.55,
+          "low": 24.4,
+          "close": 24.5,
+          "change": 0.1,
+          "capacity": 136000,
+          "turnover": 3335000,
+          "transaction": 271
+        },
+        {
+          "date": "2026-06-04",
+          "open": 24.6,
+          "high": 26.3,
+          "low": 24.5,
+          "close": 26.3,
+          "change": 1.8,
+          "capacity": 776000,
+          "turnover": 19811000,
+          "transaction": 443
+        },
+        {
+          "date": "2026-06-05",
+          "open": 26.5,
+          "high": 26.85,
+          "low": 25.15,
+          "close": 25.2,
+          "change": -1.1,
+          "capacity": 352000,
+          "turnover": 9050000,
+          "transaction": 495
+        },
+        {
+          "date": "2026-06-08",
+          "open": 23.4,
+          "high": 27.35,
+          "low": 23.4,
+          "close": 27.0,
+          "change": 1.8,
+          "capacity": 685000,
+          "turnover": 18077000,
+          "transaction": 599
+        },
+        {
+          "date": "2026-06-09",
+          "open": 27.0,
+          "high": 27.0,
+          "low": 26.3,
+          "close": 26.5,
+          "change": -0.5,
+          "capacity": 265000,
+          "turnover": 7039000,
+          "transaction": 297
+        },
+        {
+          "date": "2026-06-10",
+          "open": 25.5,
+          "high": 27.2,
+          "low": 25.5,
+          "close": 25.55,
+          "change": -0.95,
+          "capacity": 371000,
+          "turnover": 9735000,
+          "transaction": 373
+        },
+        {
+          "date": "2026-06-11",
+          "open": 25.3,
+          "high": 28.1,
+          "low": 24.8,
+          "close": 28.1,
+          "change": 2.55,
+          "capacity": 833000,
+          "turnover": 22730000,
+          "transaction": 813
+        },
+        {
+          "date": "2026-06-12",
+          "open": 30.9,
+          "high": 30.9,
+          "low": 30.9,
+          "close": 30.9,
+          "change": 2.8,
+          "capacity": 368000,
+          "turnover": 11356000,
+          "transaction": 327
+        },
+        {
+          "date": "2026-06-15",
+          "open": 33.95,
+          "high": 33.95,
+          "low": 33.95,
+          "close": 33.95,
+          "change": 3.05,
+          "capacity": 298000,
+          "turnover": 10102000,
+          "transaction": 318
+        },
+        {
+          "date": "2026-06-16",
+          "open": 37.3,
+          "high": 37.3,
+          "low": 37.3,
+          "close": 37.3,
+          "change": 3.35,
+          "capacity": 486000,
+          "turnover": 18123000,
+          "transaction": 457
+        }
+      ]
+    },
+    {
+      "code": "Ke Xian",
+      "name": "科嶠",
+      "group": "Electronic Components",
+      "market": "TPEx (OTC) Listed",
+      "date_base": "2026-06-02",
+      "date_today": "2026-06-16",
+      "close_base": 236.5,
+      "close_today": 354.0,
+      "pct_10d": 49.68287526427061,
+      "last_5d": [
+        {
+          "date": "2026-06-10",
+          "open": 374.0,
+          "high": 380.0,
+          "low": 323.5,
+          "close": 327.0,
+          "change": -18.5,
+          "capacity": 7992000,
+          "turnover": 2824423000,
+          "transaction": 7943
+        },
+        {
+          "date": "2026-06-11",
+          "open": 320.0,
+          "high": 323.0,
+          "low": 294.5,
+          "close": 305.0,
+          "change": -22.0,
+          "capacity": 4052000,
+          "turnover": 1247057000,
+          "transaction": 5319
+        },
+        {
+          "date": "2026-06-12",
+          "open": 320.5,
+          "high": 335.5,
+          "low": 317.0,
+          "close": 335.5,
+          "change": 30.5,
+          "capacity": 484000,
+          "turnover": 158752000,
+          "transaction": 539
+        },
+        {
+          "date": "2026-06-15",
+          "open": 368.0,
+          "high": 368.0,
+          "low": 351.0,
+          "close": 360.0,
+          "change": 24.5,
+          "capacity": 495000,
+          "turnover": 178273000,
+          "transaction": 609
+        },
+        {
+          "date": "2026-06-16",
+          "open": 365.0,
+          "high": 365.0,
+          "low": 342.5,
+          "close": 354.0,
+          "change": -6.0,
+          "capacity": 211000,
+          "turnover": 74599000,
+          "transaction": 384
+        }
+      ],
+      "all_valid": [
+        {
+          "date": "2026-06-02",
+          "open": 262.0,
+          "high": 262.0,
+          "low": 236.0,
+          "close": 236.5,
+          "change": -25.5,
+          "capacity": 1261000,
+          "turnover": 309695000,
+          "transaction": 2125
+        },
+        {
+          "date": "2026-06-03",
+          "open": 238.0,
+          "high": 238.5,
+          "low": 224.0,
+          "close": 236.5,
+          "change": 0.0,
+          "capacity": 1098000,
+          "turnover": 253049000,
+          "transaction": 1469
+        },
+        {
+          "date": "2026-06-04",
+          "open": 233.0,
+          "high": 260.0,
+          "low": 233.0,
+          "close": 260.0,
+          "change": 23.5,
+          "capacity": 1526000,
+          "turnover": 389903000,
+          "transaction": 1452
+        },
+        {
+          "date": "2026-06-05",
+          "open": 283.0,
+          "high": 286.0,
+          "low": 250.5,
+          "close": 286.0,
+          "change": 26.0,
+          "capacity": 4750000,
+          "turnover": 1322961000,
+          "transaction": 4142
+        },
+        {
+          "date": "2026-06-08",
+          "open": 285.5,
+          "high": 314.5,
+          "low": 285.5,
+          "close": 314.5,
+          "change": 28.5,
+          "capacity": 2955000,
+          "turnover": 911075000,
+          "transaction": 1933
+        },
+        {
+          "date": "2026-06-09",
+          "open": 345.5,
+          "high": 345.5,
+          "low": 345.5,
+          "close": 345.5,
+          "change": 31.0,
+          "capacity": 491000,
+          "turnover": 169540000,
+          "transaction": 343
+        },
+        {
+          "date": "2026-06-10",
+          "open": 374.0,
+          "high": 380.0,
+          "low": 323.5,
+          "close": 327.0,
+          "change": -18.5,
+          "capacity": 7992000,
+          "turnover": 2824423000,
+          "transaction": 7943
+        },
+        {
+          "date": "2026-06-11",
+          "open": 320.0,
+          "high": 323.0,
+          "low": 294.5,
+          "close": 305.0,
+          "change": -22.0,
+          "capacity": 4052000,
+          "turnover": 1247057000,
+          "transaction": 5319
+        },
+        {
+          "date": "2026-06-12",
+          "open": 320.5,
+          "high": 335.5,
+          "low": 317.0,
+          "close": 335.5,
+          "change": 30.5,
+          "capacity": 484000,
+          "turnover": 158752000,
+          "transaction": 539
+        },
+        {
+          "date": "2026-06-15",
+          "open": 368.0,
+          "high": 368.0,
+          "low": 351.0,
+          "close": 360.0,
+          "change": 24.5,
+          "capacity": 495000,
+          "turnover": 178273000,
+          "transaction": 609
+        },
+        {
+          "date": "2026-06-16",
+          "open": 365.0,
+          "high": 365.0,
+          "low": 342.5,
+          "close": 354.0,
+          "change": -6.0,
+          "capacity": 211000,
+          "turnover": 74599000,
+          "transaction": 384
+        }
+      ]
+    },
+    {
+      "code": "Wei Duan",
+      "name": "微端",
+      "group": "Other Electronics",
+      "market": "TPEx (OTC) Listed",
+      "date_base": "2026-06-02",
+      "date_today": "2026-06-16",
+      "close_base": 30.75,
+      "close_today": 46.0,
+      "pct_10d": 49.59349593495935,
+      "last_5d": [
+        {
+          "date": "2026-06-10",
+          "open": 31.8,
+          "high": 34.25,
+          "low": 30.5,
+          "close": 34.25,
+          "change": 3.1,
+          "capacity": 488000,
+          "turnover": 16526000,
+          "transaction": 448
+        },
+        {
+          "date": "2026-06-11",
+          "open": 37.65,
+          "high": 37.65,
+          "low": 37.65,
+          "close": 37.65,
+          "change": 3.4,
+          "capacity": 324000,
+          "turnover": 12190000,
+          "transaction": 233
+        },
+        {
+          "date": "2026-06-12",
+          "open": 41.4,
+          "high": 41.4,
+          "low": 41.4,
+          "close": 41.4,
+          "change": 3.75,
+          "capacity": 219000,
+          "turnover": 9053000,
+          "transaction": 174
+        },
+        {
+          "date": "2026-06-15",
+          "open": 45.5,
+          "high": 45.5,
+          "low": 45.5,
+          "close": 45.5,
+          "change": 4.1,
+          "capacity": 95000,
+          "turnover": 4338000,
+          "transaction": 137
+        },
+        {
+          "date": "2026-06-16",
+          "open": 48.05,
+          "high": 48.05,
+          "low": 41.85,
+          "close": 46.0,
+          "change": 0.5,
+          "capacity": 1838000,
+          "turnover": 82929000,
+          "transaction": 1475
+        }
+      ],
+      "all_valid": [
+        {
+          "date": "2026-06-02",
+          "open": 30.35,
+          "high": 30.9,
+          "low": 30.15,
+          "close": 30.75,
+          "change": 0.15,
+          "capacity": 82000,
+          "turnover": 2491000,
+          "transaction": 46
+        },
+        {
+          "date": "2026-06-03",
+          "open": 30.45,
+          "high": 30.6,
+          "low": 30.35,
+          "close": 30.55,
+          "change": -0.2,
+          "capacity": 22000,
+          "turnover": 671000,
+          "transaction": 32
+        },
+        {
+          "date": "2026-06-04",
+          "open": 31.0,
+          "high": 33.25,
+          "low": 30.8,
+          "close": 33.25,
+          "change": 2.7,
+          "capacity": 263000,
+          "turnover": 8389000,
+          "transaction": 200
+        },
+        {
+          "date": "2026-06-05",
+          "open": 33.25,
+          "high": 34.0,
+          "low": 31.7,
+          "close": 31.7,
+          "change": -1.55,
+          "capacity": 113000,
+          "turnover": 3652000,
+          "transaction": 140
+        },
+        {
+          "date": "2026-06-08",
+          "open": 29.65,
+          "high": 31.5,
+          "low": 29.45,
+          "close": 31.1,
+          "change": -0.6,
+          "capacity": 55000,
+          "turnover": 1670000,
+          "transaction": 62
+        },
+        {
+          "date": "2026-06-09",
+          "open": 31.7,
+          "high": 31.7,
+          "low": 30.6,
+          "close": 31.15,
+          "change": 0.05,
+          "capacity": 24000,
+          "turnover": 750000,
+          "transaction": 32
+        },
+        {
+          "date": "2026-06-10",
+          "open": 31.8,
+          "high": 34.25,
+          "low": 30.5,
+          "close": 34.25,
+          "change": 3.1,
+          "capacity": 488000,
+          "turnover": 16526000,
+          "transaction": 448
+        },
+        {
+          "date": "2026-06-11",
+          "open": 37.65,
+          "high": 37.65,
+          "low": 37.65,
+          "close": 37.65,
+          "change": 3.4,
+          "capacity": 324000,
+          "turnover": 12190000,
+          "transaction": 233
+        },
+        {
+          "date": "2026-06-12",
+          "open": 41.4,
+          "high": 41.4,
+          "low": 41.4,
+          "close": 41.4,
+          "change": 3.75,
+          "capacity": 219000,
+          "turnover": 9053000,
+          "transaction": 174
+        },
+        {
+          "date": "2026-06-15",
+          "open": 45.5,
+          "high": 45.5,
+          "low": 45.5,
+          "close": 45.5,
+          "change": 4.1,
+          "capacity": 95000,
+          "turnover": 4338000,
+          "transaction": 137
+        },
+        {
+          "date": "2026-06-16",
+          "open": 48.05,
+          "high": 48.05,
+          "low": 41.85,
+          "close": 46.0,
+          "change": 0.5,
+          "capacity": 1838000,
+          "turnover": 82929000,
+          "transaction": 1475
+        }
+      ]
+    },
+    {
+      "code": "Lian-Yi Optical",
+      "name": "聯一光",
+      "group": "Optoelectronics",
+      "market": "TPEx (OTC) Listed",
+      "date_base": "2026-06-02",
+      "date_today": "2026-06-16",
+      "close_base": 54.7,
+      "close_today": 81.0,
+      "pct_10d": 48.08043875685557,
+      "last_5d": [
+        {
+          "date": "2026-06-10",
+          "open": 64.4,
+          "high": 65.0,
+          "low": 64.2,
+          "close": 65.0,
+          "change": 5.9,
+          "capacity": 3642000,
+          "turnover": 236234000,
+          "transaction": 1348
+        },
+        {
+          "date": "2026-06-11",
+          "open": 65.1,
+          "high": 71.5,
+          "low": 62.4,
+          "close": 71.5,
+          "change": 6.5,
+          "capacity": 22069000,
+          "turnover": 1497047000,
+          "transaction": 15484
+        },
+        {
+          "date": "2026-06-12",
+          "open": 72.0,
+          "high": 75.5,
+          "low": 69.6,
+          "close": 70.0,
+          "change": -1.5,
+          "capacity": 18985000,
+          "turnover": 1362915000,
+          "transaction": 13830
+        },
+        {
+          "date": "2026-06-15",
+          "open": 71.4,
+          "high": 77.0,
+          "low": 70.0,
+          "close": 73.7,
+          "change": 3.7,
+          "capacity": 11051000,
+          "turnover": 822558000,
+          "transaction": 8261
+        },
+        {
+          "date": "2026-06-16",
+          "open": 73.4,
+          "high": 81.0,
+          "low": 73.2,
+          "close": 81.0,
+          "change": 7.3,
+          "capacity": 13279000,
+          "turnover": 1043351000,
+          "transaction": 9146
+        }
+      ],
+      "all_valid": [
+        {
+          "date": "2026-06-02",
+          "open": 56.5,
+          "high": 58.5,
+          "low": 51.7,
+          "close": 54.7,
+          "change": 0.5,
+          "capacity": 3330000,
+          "turnover": 183138000,
+          "transaction": 2700
+        },
+        {
+          "date": "2026-06-03",
+          "open": 54.7,
+          "high": 55.6,
+          "low": 52.1,
+          "close": 52.2,
+          "change": -2.5,
+          "capacity": 1691000,
+          "turnover": 90775000,
+          "transaction": 1848
+        },
+        {
+          "date": "2026-06-04",
+          "open": 51.6,
+          "high": 55.5,
+          "low": 50.0,
+          "close": 54.8,
+          "change": 2.6,
+          "capacity": 2168000,
+          "turnover": 114427000,
+          "transaction": 1814
+        },
+        {
+          "date": "2026-06-05",
+          "open": 55.7,
+          "high": 60.2,
+          "low": 55.2,
+          "close": 60.2,
+          "change": 5.4,
+          "capacity": 8974000,
+          "turnover": 528988000,
+          "transaction": 4917
+        },
+        {
+          "date": "2026-06-08",
+          "open": 54.2,
+          "high": 55.6,
+          "low": 54.2,
+          "close": 54.6,
+          "change": -5.6,
+          "capacity": 6377000,
+          "turnover": 347125000,
+          "transaction": 3081
+        },
+        {
+          "date": "2026-06-09",
+          "open": 56.2,
+          "high": 59.1,
+          "low": 55.4,
+          "close": 59.1,
+          "change": 5.3,
+          "capacity": 1870000,
+          "turnover": 108652000,
+          "transaction": 1094
+        },
+        {
+          "date": "2026-06-10",
+          "open": 64.4,
+          "high": 65.0,
+          "low": 64.2,
+          "close": 65.0,
+          "change": 5.9,
+          "capacity": 3642000,
+          "turnover": 236234000,
+          "transaction": 1348
+        },
+        {
+          "date": "2026-06-11",
+          "open": 65.1,
+          "high": 71.5,
+          "low": 62.4,
+          "close": 71.5,
+          "change": 6.5,
+          "capacity": 22069000,
+          "turnover": 1497047000,
+          "transaction": 15484
+        },
+        {
+          "date": "2026-06-12",
+          "open": 72.0,
+          "high": 75.5,
+          "low": 69.6,
+          "close": 70.0,
+          "change": -1.5,
+          "capacity": 18985000,
+          "turnover": 1362915000,
+          "transaction": 13830
+        },
+        {
+          "date": "2026-06-15",
+          "open": 71.4,
+          "high": 77.0,
+          "low": 70.0,
+          "close": 73.7,
+          "change": 3.7,
+          "capacity": 11051000,
+          "turnover": 822558000,
+          "transaction": 8261
+        },
+        {
+          "date": "2026-06-16",
+          "open": 73.4,
+          "high": 81.0,
+          "low": 73.2,
+          "close": 81.0,
+          "change": 7.3,
+          "capacity": 13279000,
+          "turnover": 1043351000,
+          "transaction": 9146
+        }
+      ]
+    },
+    {
+      "code": "Lian Ying",
+      "name": "聯穎",
+      "group": "Electronic Components",
+      "market": "TWSE Listed",
+      "date_base": "2026-06-02",
+      "date_today": "2026-06-16",
+      "close_base": 21.0,
+      "close_today": 30.85,
+      "pct_10d": 46.90476190476191,
+      "last_5d": [
+        {
+          "date": "2026-06-10",
+          "open": 28.2,
+          "high": 28.45,
+          "low": 26.7,
+          "close": 28.45,
+          "change": 2.55,
+          "capacity": 19668746,
+          "turnover": 551185611,
+          "transaction": 8334
+        },
+        {
+          "date": "2026-06-11",
+          "open": 30.0,
+          "high": 30.1,
+          "low": 27.0,
+          "close": 28.6,
+          "change": 0.15,
+          "capacity": 22256002,
+          "turnover": 633480322,
+          "transaction": 11900
+        },
+        {
+          "date": "2026-06-12",
+          "open": 30.2,
+          "high": 30.5,
+          "low": 28.35,
+          "close": 29.05,
+          "change": 0.45,
+          "capacity": 11919158,
+          "turnover": 350405927,
+          "transaction": 6517
+        },
+        {
+          "date": "2026-06-15",
+          "open": 30.1,
+          "high": 30.4,
+          "low": 27.9,
+          "close": 28.05,
+          "change": -1.0,
+          "capacity": 9298925,
+          "turnover": 268800706,
+          "transaction": 5675
+        },
+        {
+          "date": "2026-06-16",
+          "open": 28.0,
+          "high": 30.85,
+          "low": 27.6,
+          "close": 30.85,
+          "change": 2.8,
+          "capacity": 10939707,
+          "turnover": 331192318,
+          "transaction": 4571
+        }
+      ],
+      "all_valid": [
+        {
+          "date": "2026-06-02",
+          "open": 21.8,
+          "high": 21.8,
+          "low": 20.45,
+          "close": 21.0,
+          "change": -0.45,
+          "capacity": 2600832,
+          "turnover": 54598838,
+          "transaction": 1395
+        },
+        {
+          "date": "2026-06-03",
+          "open": 21.5,
+          "high": 22.05,
+          "low": 20.85,
+          "close": 21.8,
+          "change": 0.8,
+          "capacity": 2995337,
+          "turnover": 64629543,
+          "transaction": 1543
+        },
+        {
+          "date": "2026-06-04",
+          "open": 21.55,
+          "high": 23.95,
+          "low": 21.2,
+          "close": 23.95,
+          "change": 2.15,
+          "capacity": 10932785,
+          "turnover": 256040136,
+          "transaction": 4799
+        },
+        {
+          "date": "2026-06-05",
+          "open": 24.1,
+          "high": 24.9,
+          "low": 22.65,
+          "close": 24.05,
+          "change": 0.1,
+          "capacity": 10952260,
+          "turnover": 260122802,
+          "transaction": 6153
+        },
+        {
+          "date": "2026-06-08",
+          "open": 21.7,
+          "high": 24.05,
+          "low": 21.7,
+          "close": 23.55,
+          "change": -0.5,
+          "capacity": 4841810,
+          "turnover": 110716101,
+          "transaction": 2620
+        },
+        {
+          "date": "2026-06-09",
+          "open": 23.9,
+          "high": 25.9,
+          "low": 23.05,
+          "close": 25.9,
+          "change": 2.35,
+          "capacity": 11675585,
+          "turnover": 292618402,
+          "transaction": 4991
+        },
+        {
+          "date": "2026-06-10",
+          "open": 28.2,
+          "high": 28.45,
+          "low": 26.7,
+          "close": 28.45,
+          "change": 2.55,
+          "capacity": 19668746,
+          "turnover": 551185611,
+          "transaction": 8334
+        },
+        {
+          "date": "2026-06-11",
+          "open": 30.0,
+          "high": 30.1,
+          "low": 27.0,
+          "close": 28.6,
+          "change": 0.15,
+          "capacity": 22256002,
+          "turnover": 633480322,
+          "transaction": 11900
+        },
+        {
+          "date": "2026-06-12",
+          "open": 30.2,
+          "high": 30.5,
+          "low": 28.35,
+          "close": 29.05,
+          "change": 0.45,
+          "capacity": 11919158,
+          "turnover": 350405927,
+          "transaction": 6517
+        },
+        {
+          "date": "2026-06-15",
+          "open": 30.1,
+          "high": 30.4,
+          "low": 27.9,
+          "close": 28.05,
+          "change": -1.0,
+          "capacity": 9298925,
+          "turnover": 268800706,
+          "transaction": 5675
+        },
+        {
+          "date": "2026-06-16",
+          "open": 28.0,
+          "high": 30.85,
+          "low": 27.6,
+          "close": 30.85,
+          "change": 2.8,
+          "capacity": 10939707,
+          "turnover": 331192318,
+          "transaction": 4571
+        }
+      ]
+    },
+    {
+      "code": "Da Yi (T resistor)",
+      "name": "大毅",
+      "group": "Electronic Components",
+      "market": "TWSE Listed",
+      "date_base": "2026-06-02",
+      "date_today": "2026-06-16",
+      "close_base": 143.0,
+      "close_today": 207.0,
+      "pct_10d": 44.75524475524475,
+      "last_5d": [
+        {
+          "date": "2026-06-10",
+          "open": 164.0,
+          "high": 183.5,
+          "low": 163.5,
+          "close": 170.0,
+          "change": 3.0,
+          "capacity": 27954824,
+          "turnover": 4936549743,
+          "transaction": 16969
+        },
+        {
+          "date": "2026-06-11",
+          "open": 180.0,
+          "high": 187.0,
+          "low": 162.0,
+          "close": 177.5,
+          "change": 7.5,
+          "capacity": 36879434,
+          "turnover": 6624911825,
+          "transaction": 26789
+        },
+        {
+          "date": "2026-06-12",
+          "open": 189.0,
+          "high": 194.5,
+          "low": 168.0,
+          "close": 171.5,
+          "change": -6.0,
+          "capacity": 24711057,
+          "turnover": 4444762684,
+          "transaction": 25868
+        },
+        {
+          "date": "2026-06-15",
+          "open": 180.5,
+          "high": 188.5,
+          "low": 180.5,
+          "close": 188.5,
+          "change": 17.0,
+          "capacity": 10643908,
+          "turnover": 1993715491,
+          "transaction": 6721
+        },
+        {
+          "date": "2026-06-16",
+          "open": 200.0,
+          "high": 207.0,
+          "low": 200.0,
+          "close": 207.0,
+          "change": 18.5,
+          "capacity": 16112836,
+          "turnover": 3320057371,
+          "transaction": 9160
+        }
+      ],
+      "all_valid": [
+        {
+          "date": "2026-06-02",
+          "open": 144.0,
+          "high": 145.0,
+          "low": 130.0,
+          "close": 143.0,
+          "change": -1.0,
+          "capacity": 3194844,
+          "turnover": 433219426,
+          "transaction": 3260
+        },
+        {
+          "date": "2026-06-03",
+          "open": 142.0,
+          "high": 143.0,
+          "low": 136.5,
+          "close": 137.0,
+          "change": -6.0,
+          "capacity": 1292660,
+          "turnover": 179634666,
+          "transaction": 1612
+        },
+        {
+          "date": "2026-06-04",
+          "open": 133.5,
+          "high": 140.0,
+          "low": 130.0,
+          "close": 137.5,
+          "change": 0.5,
+          "capacity": 2078141,
+          "turnover": 282507797,
+          "transaction": 1915
+        },
+        {
+          "date": "2026-06-05",
+          "open": 134.5,
+          "high": 150.0,
+          "low": 126.0,
+          "close": 150.0,
+          "change": 12.5,
+          "capacity": 4349162,
+          "turnover": 616414722,
+          "transaction": 4254
+        },
+        {
+          "date": "2026-06-08",
+          "open": 135.0,
+          "high": 153.5,
+          "low": 135.0,
+          "close": 152.0,
+          "change": 2.0,
+          "capacity": 3928037,
+          "turnover": 561398030,
+          "transaction": 3641
+        },
+        {
+          "date": "2026-06-09",
+          "open": 161.0,
+          "high": 167.0,
+          "low": 151.5,
+          "close": 167.0,
+          "change": 15.0,
+          "capacity": 22316543,
+          "turnover": 3619150119,
+          "transaction": 14692
+        },
+        {
+          "date": "2026-06-10",
+          "open": 164.0,
+          "high": 183.5,
+          "low": 163.5,
+          "close": 170.0,
+          "change": 3.0,
+          "capacity": 27954824,
+          "turnover": 4936549743,
+          "transaction": 16969
+        },
+        {
+          "date": "2026-06-11",
+          "open": 180.0,
+          "high": 187.0,
+          "low": 162.0,
+          "close": 177.5,
+          "change": 7.5,
+          "capacity": 36879434,
+          "turnover": 6624911825,
+          "transaction": 26789
+        },
+        {
+          "date": "2026-06-12",
+          "open": 189.0,
+          "high": 194.5,
+          "low": 168.0,
+          "close": 171.5,
+          "change": -6.0,
+          "capacity": 24711057,
+          "turnover": 4444762684,
+          "transaction": 25868
+        },
+        {
+          "date": "2026-06-15",
+          "open": 180.5,
+          "high": 188.5,
+          "low": 180.5,
+          "close": 188.5,
+          "change": 17.0,
+          "capacity": 10643908,
+          "turnover": 1993715491,
+          "transaction": 6721
+        },
+        {
+          "date": "2026-06-16",
+          "open": 200.0,
+          "high": 207.0,
+          "low": 200.0,
+          "close": 207.0,
+          "change": 18.5,
+          "capacity": 16112836,
+          "turnover": 3320057371,
+          "transaction": 9160
+        }
+      ]
+    },
+    {
+      "code": "Kai Yu",
+      "name": "凱鈺",
+      "group": "Semiconductors",
+      "market": "TPEx (OTC) Listed",
+      "date_base": "2026-06-02",
+      "date_today": "2026-06-16",
+      "close_base": 18.3,
+      "close_today": 26.25,
+      "pct_10d": 43.44262295081967,
+      "last_5d": [
+        {
+          "date": "2026-06-10",
+          "open": 17.25,
+          "high": 18.85,
+          "low": 17.0,
+          "close": 18.0,
+          "change": 0.8,
+          "capacity": 184000,
+          "turnover": 3293000,
+          "transaction": 97
+        },
+        {
+          "date": "2026-06-11",
+          "open": 19.8,
+          "high": 19.8,
+          "low": 19.8,
+          "close": 19.8,
+          "change": 1.8,
+          "capacity": 472000,
+          "turnover": 9349000,
+          "transaction": 178
+        },
+        {
+          "date": "2026-06-12",
+          "open": 21.75,
+          "high": 21.75,
+          "low": 21.75,
+          "close": 21.75,
+          "change": 1.95,
+          "capacity": 301000,
+          "turnover": 6547000,
+          "transaction": 146
+        },
+        {
+          "date": "2026-06-15",
+          "open": 23.9,
+          "high": 23.9,
+          "low": 23.9,
+          "close": 23.9,
+          "change": 2.15,
+          "capacity": 1474000,
+          "turnover": 35240000,
+          "transaction": 467
+        },
+        {
+          "date": "2026-06-16",
+          "open": 26.25,
+          "high": 26.25,
+          "low": 25.5,
+          "close": 26.25,
+          "change": 2.35,
+          "capacity": 4590000,
+          "turnover": 120454000,
+          "transaction": 1725
+        }
+      ],
+      "all_valid": [
+        {
+          "date": "2026-06-02",
+          "open": 18.25,
+          "high": 18.35,
+          "low": 18.0,
+          "close": 18.3,
+          "change": 0.05,
+          "capacity": 158000,
+          "turnover": 2881000,
+          "transaction": 91
+        },
+        {
+          "date": "2026-06-03",
+          "open": 18.3,
+          "high": 18.3,
+          "low": 18.05,
+          "close": 18.05,
+          "change": -0.25,
+          "capacity": 121000,
+          "turnover": 2193000,
+          "transaction": 67
+        },
+        {
+          "date": "2026-06-04",
+          "open": 18.05,
+          "high": 18.35,
+          "low": 17.95,
+          "close": 17.95,
+          "change": -0.1,
+          "capacity": 219000,
+          "turnover": 3968000,
+          "transaction": 100
+        },
+        {
+          "date": "2026-06-05",
+          "open": 18.1,
+          "high": 18.1,
+          "low": 17.6,
+          "close": 17.8,
+          "change": -0.15,
+          "capacity": 65000,
+          "turnover": 1167000,
+          "transaction": 41
+        },
+        {
+          "date": "2026-06-08",
+          "open": 16.35,
+          "high": 17.5,
+          "low": 16.35,
+          "close": 17.45,
+          "change": -0.35,
+          "capacity": 28000,
+          "turnover": 479000,
+          "transaction": 31
+        },
+        {
+          "date": "2026-06-09",
+          "open": 17.45,
+          "high": 17.45,
+          "low": 17.1,
+          "close": 17.2,
+          "change": -0.25,
+          "capacity": 35000,
+          "turnover": 599000,
+          "transaction": 56
+        },
+        {
+          "date": "2026-06-10",
+          "open": 17.25,
+          "high": 18.85,
+          "low": 17.0,
+          "close": 18.0,
+          "change": 0.8,
+          "capacity": 184000,
+          "turnover": 3293000,
+          "transaction": 97
+        },
+        {
+          "date": "2026-06-11",
+          "open": 19.8,
+          "high": 19.8,
+          "low": 19.8,
+          "close": 19.8,
+          "change": 1.8,
+          "capacity": 472000,
+          "turnover": 9349000,
+          "transaction": 178
+        },
+        {
+          "date": "2026-06-12",
+          "open": 21.75,
+          "high": 21.75,
+          "low": 21.75,
+          "close": 21.75,
+          "change": 1.95,
+          "capacity": 301000,
+          "turnover": 6547000,
+          "transaction": 146
+        },
+        {
+          "date": "2026-06-15",
+          "open": 23.9,
+          "high": 23.9,
+          "low": 23.9,
+          "close": 23.9,
+          "change": 2.15,
+          "capacity": 1474000,
+          "turnover": 35240000,
+          "transaction": 467
+        },
+        {
+          "date": "2026-06-16",
+          "open": 26.25,
+          "high": 26.25,
+          "low": 25.5,
+          "close": 26.25,
+          "change": 2.35,
+          "capacity": 4590000,
+          "turnover": 120454000,
+          "transaction": 1725
+        }
+      ]
+    }
+  ],
+  "finance": [
+    {
+      "code": "CTBC Financial Holding (Kai Ji Jin)",
+      "name": "凱基金",
+      "group": "Financial & Insurance",
+      "market": "TWSE Listed",
+      "date_base": "2026-06-02",
+      "date_today": "2026-06-16",
+      "close_base": 23.4,
+      "close_today": 29.7,
+      "pct_10d": 26.923076923076927,
+      "last_5d": [
+        {
+          "date": "2026-06-10",
+          "open": 28.45,
+          "high": 28.85,
+          "low": 27.85,
+          "close": 28.2,
+          "change": -0.85,
+          "capacity": 202927391,
+          "turnover": 5758059730,
+          "transaction": 42363
+        },
+        {
+          "date": "2026-06-11",
+          "open": 28.1,
+          "high": 28.5,
+          "low": 27.55,
+          "close": 27.75,
+          "change": -0.45,
+          "capacity": 174107279,
+          "turnover": 4861584703,
+          "transaction": 35595
+        },
+        {
+          "date": "2026-06-12",
+          "open": 28.75,
+          "high": 29.4,
+          "low": 27.45,
+          "close": 27.45,
+          "change": -0.3,
+          "capacity": 98648048,
+          "turnover": 2779937808,
+          "transaction": 28104
+        },
+        {
+          "date": "2026-06-15",
+          "open": 28.3,
+          "high": 28.8,
+          "low": 28.05,
+          "close": 28.8,
+          "change": 1.35,
+          "capacity": 81804855,
+          "turnover": 2333391945,
+          "transaction": 18375
+        },
+        {
+          "date": "2026-06-16",
+          "open": 29.0,
+          "high": 30.2,
+          "low": 28.75,
+          "close": 29.7,
+          "change": 0.9,
+          "capacity": 127013439,
+          "turnover": 3768918303,
+          "transaction": 31546
+        }
+      ],
+      "all_valid": [
+        {
+          "date": "2026-06-02",
+          "open": 22.55,
+          "high": 23.45,
+          "low": 22.3,
+          "close": 23.4,
+          "change": 0.75,
+          "capacity": 212718010,
+          "turnover": 4898918911,
+          "transaction": 27277
+        },
+        {
+          "date": "2026-06-03",
+          "open": 24.45,
+          "high": 25.7,
+          "low": 24.35,
+          "close": 25.7,
+          "change": 2.3,
+          "capacity": 121759780,
+          "turnover": 3084725268,
+          "transaction": 25952
+        },
+        {
+          "date": "2026-06-04",
+          "open": 26.9,
+          "high": 28.15,
+          "low": 26.0,
+          "close": 27.4,
+          "change": 1.7,
+          "capacity": 526935732,
+          "turnover": 14478441117,
+          "transaction": 107022
+        },
+        {
+          "date": "2026-06-05",
+          "open": 27.3,
+          "high": 28.5,
+          "low": 27.0,
+          "close": 27.6,
+          "change": 0.2,
+          "capacity": 312820082,
+          "turnover": 8669665898,
+          "transaction": 61455
+        },
+        {
+          "date": "2026-06-08",
+          "open": 26.55,
+          "high": 26.95,
+          "low": 25.5,
+          "close": 26.75,
+          "change": -0.85,
+          "capacity": 270734576,
+          "turnover": 7143924749,
+          "transaction": 51495
+        },
+        {
+          "date": "2026-06-09",
+          "open": 26.85,
+          "high": 29.15,
+          "low": 26.85,
+          "close": 29.05,
+          "change": 2.3,
+          "capacity": 274987983,
+          "turnover": 7854449489,
+          "transaction": 56078
+        },
+        {
+          "date": "2026-06-10",
+          "open": 28.45,
+          "high": 28.85,
+          "low": 27.85,
+          "close": 28.2,
+          "change": -0.85,
+          "capacity": 202927391,
+          "turnover": 5758059730,
+          "transaction": 42363
+        },
+        {
+          "date": "2026-06-11",
+          "open": 28.1,
+          "high": 28.5,
+          "low": 27.55,
+          "close": 27.75,
+          "change": -0.45,
+          "capacity": 174107279,
+          "turnover": 4861584703,
+          "transaction": 35595
+        },
+        {
+          "date": "2026-06-12",
+          "open": 28.75,
+          "high": 29.4,
+          "low": 27.45,
+          "close": 27.45,
+          "change": -0.3,
+          "capacity": 98648048,
+          "turnover": 2779937808,
+          "transaction": 28104
+        },
+        {
+          "date": "2026-06-15",
+          "open": 28.3,
+          "high": 28.8,
+          "low": 28.05,
+          "close": 28.8,
+          "change": 1.35,
+          "capacity": 81804855,
+          "turnover": 2333391945,
+          "transaction": 18375
+        },
+        {
+          "date": "2026-06-16",
+          "open": 29.0,
+          "high": 30.2,
+          "low": 28.75,
+          "close": 29.7,
+          "change": 0.9,
+          "capacity": 127013439,
+          "turnover": 3768918303,
+          "transaction": 31546
+        }
+      ]
+    },
+    {
+      "code": "Taishin Shin Kong Financial Holding",
+      "name": "台新新光金",
+      "group": "Financial & Insurance",
+      "market": "TWSE Listed",
+      "date_base": "2026-06-02",
+      "date_today": "2026-06-16",
+      "close_base": 26.1,
+      "close_today": 32.3,
+      "pct_10d": 23.75478927203063,
+      "last_5d": [
+        {
+          "date": "2026-06-10",
+          "open": 29.5,
+          "high": 29.55,
+          "low": 28.5,
+          "close": 28.9,
+          "change": -0.65,
+          "capacity": 111385443,
+          "turnover": 3220673911,
+          "transaction": 28239
+        },
+        {
+          "date": "2026-06-11",
+          "open": 28.9,
+          "high": 28.9,
+          "low": 28.0,
+          "close": 28.75,
+          "change": -0.15,
+          "capacity": 65102370,
+          "turnover": 1858144806,
+          "transaction": 15294
+        },
+        {
+          "date": "2026-06-12",
+          "open": 29.2,
+          "high": 30.8,
+          "low": 29.15,
+          "close": 30.2,
+          "change": 1.45,
+          "capacity": 157917202,
+          "turnover": 4763116867,
+          "transaction": 31899
+        },
+        {
+          "date": "2026-06-15",
+          "open": 30.8,
+          "high": 31.75,
+          "low": 30.55,
+          "close": 31.6,
+          "change": 1.4,
+          "capacity": 124423007,
+          "turnover": 3898570353,
+          "transaction": 26745
+        },
+        {
+          "date": "2026-06-16",
+          "open": 31.8,
+          "high": 32.6,
+          "low": 31.65,
+          "close": 32.3,
+          "change": 0.7,
+          "capacity": 109048462,
+          "turnover": 3524092757,
+          "transaction": 25364
+        }
+      ],
+      "all_valid": [
+        {
+          "date": "2026-06-02",
+          "open": 24.45,
+          "high": 26.1,
+          "low": 24.3,
+          "close": 26.1,
+          "change": 1.5,
+          "capacity": 254723925,
+          "turnover": 6408118591,
+          "transaction": 41028
+        },
+        {
+          "date": "2026-06-03",
+          "open": 26.0,
+          "high": 28.35,
+          "low": 25.65,
+          "close": 28.3,
+          "change": 2.2,
+          "capacity": 303603092,
+          "turnover": 8383839624,
+          "transaction": 56770
+        },
+        {
+          "date": "2026-06-04",
+          "open": 28.3,
+          "high": 29.4,
+          "low": 28.0,
+          "close": 28.55,
+          "change": 0.25,
+          "capacity": 246346373,
+          "turnover": 7092927202,
+          "transaction": 47948
+        },
+        {
+          "date": "2026-06-05",
+          "open": 28.5,
+          "high": 28.8,
+          "low": 27.9,
+          "close": 28.6,
+          "change": 0.05,
+          "capacity": 143711010,
+          "turnover": 4076648872,
+          "transaction": 28886
+        },
+        {
+          "date": "2026-06-08",
+          "open": 27.5,
+          "high": 27.9,
+          "low": 27.15,
+          "close": 27.75,
+          "change": -0.85,
+          "capacity": 115887137,
+          "turnover": 3194328981,
+          "transaction": 24401
+        },
+        {
+          "date": "2026-06-09",
+          "open": 28.4,
+          "high": 29.65,
+          "low": 28.15,
+          "close": 29.55,
+          "change": 1.8,
+          "capacity": 137888947,
+          "turnover": 4024578174,
+          "transaction": 28251
+        },
+        {
+          "date": "2026-06-10",
+          "open": 29.5,
+          "high": 29.55,
+          "low": 28.5,
+          "close": 28.9,
+          "change": -0.65,
+          "capacity": 111385443,
+          "turnover": 3220673911,
+          "transaction": 28239
+        },
+        {
+          "date": "2026-06-11",
+          "open": 28.9,
+          "high": 28.9,
+          "low": 28.0,
+          "close": 28.75,
+          "change": -0.15,
+          "capacity": 65102370,
+          "turnover": 1858144806,
+          "transaction": 15294
+        },
+        {
+          "date": "2026-06-12",
+          "open": 29.2,
+          "high": 30.8,
+          "low": 29.15,
+          "close": 30.2,
+          "change": 1.45,
+          "capacity": 157917202,
+          "turnover": 4763116867,
+          "transaction": 31899
+        },
+        {
+          "date": "2026-06-15",
+          "open": 30.8,
+          "high": 31.75,
+          "low": 30.55,
+          "close": 31.6,
+          "change": 1.4,
+          "capacity": 124423007,
+          "turnover": 3898570353,
+          "transaction": 26745
+        },
+        {
+          "date": "2026-06-16",
+          "open": 31.8,
+          "high": 32.6,
+          "low": 31.65,
+          "close": 32.3,
+          "change": 0.7,
+          "capacity": 109048462,
+          "turnover": 3524092757,
+          "transaction": 25364
+        }
+      ]
+    },
+    {
+      "code": "Cathay Financial Holding (Guo Tai Jin)",
+      "name": "國泰金",
+      "group": "Financial & Insurance",
+      "market": "TWSE Listed",
+      "date_base": "2026-06-02",
+      "date_today": "2026-06-16",
+      "close_base": 89.2,
+      "close_today": 109.5,
+      "pct_10d": 22.757847533632283,
+      "last_5d": [
+        {
+          "date": "2026-06-10",
+          "open": 102.0,
+          "high": 102.5,
+          "low": 99.4,
+          "close": 99.9,
+          "change": -4.1,
+          "capacity": 42154420,
+          "turnover": 4248399271,
+          "transaction": 17886
+        },
+        {
+          "date": "2026-06-11",
+          "open": 101.0,
+          "high": 101.5,
+          "low": 97.7,
+          "close": 100.5,
+          "change": 0.6,
+          "capacity": 36086504,
+          "turnover": 3603721342,
+          "transaction": 18150
+        },
+        {
+          "date": "2026-06-12",
+          "open": 102.0,
+          "high": 105.5,
+          "low": 99.7,
+          "close": 100.5,
+          "change": 0.0,
+          "capacity": 32131390,
+          "turnover": 3259664669,
+          "transaction": 13198
+        },
+        {
+          "date": "2026-06-15",
+          "open": 105.0,
+          "high": 105.5,
+          "low": 103.0,
+          "close": 104.0,
+          "change": 3.5,
+          "capacity": 25382726,
+          "turnover": 2639283544,
+          "transaction": 10144
+        },
+        {
+          "date": "2026-06-16",
+          "open": 104.5,
+          "high": 109.5,
+          "low": 104.0,
+          "close": 109.5,
+          "change": 5.5,
+          "capacity": 54388852,
+          "turnover": 5876067812,
+          "transaction": 18501
+        }
+      ],
+      "all_valid": [
+        {
+          "date": "2026-06-02",
+          "open": 88.5,
+          "high": 89.2,
+          "low": 86.6,
+          "close": 89.2,
+          "change": 1.0,
+          "capacity": 57830132,
+          "turnover": 5095622143,
+          "transaction": 28781
+        },
+        {
+          "date": "2026-06-03",
+          "open": 89.9,
+          "high": 92.5,
+          "low": 89.2,
+          "close": 91.8,
+          "change": 2.6,
+          "capacity": 57367426,
+          "turnover": 5236805641,
+          "transaction": 23644
+        },
+        {
+          "date": "2026-06-04",
+          "open": 96.3,
+          "high": 96.3,
+          "low": 91.8,
+          "close": 94.4,
+          "change": 2.6,
+          "capacity": 54014109,
+          "turnover": 5070307744,
+          "transaction": 31817
+        },
+        {
+          "date": "2026-06-05",
+          "open": 94.4,
+          "high": 100.0,
+          "low": 93.7,
+          "close": 100.0,
+          "change": 5.6,
+          "capacity": 69269147,
+          "turnover": 6807675953,
+          "transaction": 29506
+        },
+        {
+          "date": "2026-06-08",
+          "open": 97.8,
+          "high": 97.8,
+          "low": 94.0,
+          "close": 95.0,
+          "change": -5.0,
+          "capacity": 57020304,
+          "turnover": 5441562811,
+          "transaction": 31159
+        },
+        {
+          "date": "2026-06-09",
+          "open": 95.3,
+          "high": 104.0,
+          "low": 95.3,
+          "close": 104.0,
+          "change": 9.0,
+          "capacity": 55872704,
+          "turnover": 5678769909,
+          "transaction": 23933
+        },
+        {
+          "date": "2026-06-10",
+          "open": 102.0,
+          "high": 102.5,
+          "low": 99.4,
+          "close": 99.9,
+          "change": -4.1,
+          "capacity": 42154420,
+          "turnover": 4248399271,
+          "transaction": 17886
+        },
+        {
+          "date": "2026-06-11",
+          "open": 101.0,
+          "high": 101.5,
+          "low": 97.7,
+          "close": 100.5,
+          "change": 0.6,
+          "capacity": 36086504,
+          "turnover": 3603721342,
+          "transaction": 18150
+        },
+        {
+          "date": "2026-06-12",
+          "open": 102.0,
+          "high": 105.5,
+          "low": 99.7,
+          "close": 100.5,
+          "change": 0.0,
+          "capacity": 32131390,
+          "turnover": 3259664669,
+          "transaction": 13198
+        },
+        {
+          "date": "2026-06-15",
+          "open": 105.0,
+          "high": 105.5,
+          "low": 103.0,
+          "close": 104.0,
+          "change": 3.5,
+          "capacity": 25382726,
+          "turnover": 2639283544,
+          "transaction": 10144
+        },
+        {
+          "date": "2026-06-16",
+          "open": 104.5,
+          "high": 109.5,
+          "low": 104.0,
+          "close": 109.5,
+          "change": 5.5,
+          "capacity": 54388852,
+          "turnover": 5876067812,
+          "transaction": 18501
+        }
+      ]
+    },
+    {
+      "code": "Fubon Financial Holding (Fu Bang Jin)",
+      "name": "富邦金",
+      "group": "Financial & Insurance",
+      "market": "TWSE Listed",
+      "date_base": "2026-06-02",
+      "date_today": "2026-06-16",
+      "close_base": 113.5,
+      "close_today": 132.0,
+      "pct_10d": 16.299559471365637,
+      "last_5d": [
+        {
+          "date": "2026-06-10",
+          "open": 124.0,
+          "high": 126.0,
+          "low": 122.5,
+          "close": 122.5,
+          "change": -2.5,
+          "capacity": 68450685,
+          "turnover": 8494233640,
+          "transaction": 18293
+        },
+        {
+          "date": "2026-06-11",
+          "open": 125.0,
+          "high": 127.5,
+          "low": 121.5,
+          "close": 125.5,
+          "change": 3.0,
+          "capacity": 62123741,
+          "turnover": 7772005719,
+          "transaction": 20769
+        },
+        {
+          "date": "2026-06-12",
+          "open": 127.0,
+          "high": 129.0,
+          "low": 120.5,
+          "close": 122.0,
+          "change": -3.5,
+          "capacity": 42713760,
+          "turnover": 5254336888,
+          "transaction": 26427
+        },
+        {
+          "date": "2026-06-15",
+          "open": 126.0,
+          "high": 128.0,
+          "low": 124.5,
+          "close": 127.5,
+          "change": 5.5,
+          "capacity": 25895319,
+          "turnover": 3284634262,
+          "transaction": 11604
+        },
+        {
+          "date": "2026-06-16",
+          "open": 128.5,
+          "high": 132.5,
+          "low": 127.5,
+          "close": 132.0,
+          "change": 4.5,
+          "capacity": 40287477,
+          "turnover": 5267232680,
+          "transaction": 16615
+        }
+      ],
+      "all_valid": [
+        {
+          "date": "2026-06-02",
+          "open": 110.5,
+          "high": 113.5,
+          "low": 109.0,
+          "close": 113.5,
+          "change": 3.0,
+          "capacity": 97486405,
+          "turnover": 10904895202,
+          "transaction": 24454
+        },
+        {
+          "date": "2026-06-03",
+          "open": 115.5,
+          "high": 116.0,
+          "low": 111.0,
+          "close": 113.0,
+          "change": -0.5,
+          "capacity": 72033008,
+          "turnover": 8123876405,
+          "transaction": 38726
+        },
+        {
+          "date": "2026-06-04",
+          "open": 113.5,
+          "high": 114.0,
+          "low": 112.0,
+          "close": 114.0,
+          "change": 1.0,
+          "capacity": 55345124,
+          "turnover": 6255380975,
+          "transaction": 15797
+        },
+        {
+          "date": "2026-06-05",
+          "open": 114.0,
+          "high": 119.0,
+          "low": 112.0,
+          "close": 118.0,
+          "change": 4.0,
+          "capacity": 61781441,
+          "turnover": 7216915341,
+          "transaction": 21717
+        },
+        {
+          "date": "2026-06-08",
+          "open": 112.0,
+          "high": 117.5,
+          "low": 112.0,
+          "close": 116.0,
+          "change": -2.0,
+          "capacity": 104685607,
+          "turnover": 12091048340,
+          "transaction": 20352
+        },
+        {
+          "date": "2026-06-09",
+          "open": 115.0,
+          "high": 126.5,
+          "low": 115.0,
+          "close": 125.0,
+          "change": 9.0,
+          "capacity": 88310533,
+          "turnover": 10905253080,
+          "transaction": 29531
+        },
+        {
+          "date": "2026-06-10",
+          "open": 124.0,
+          "high": 126.0,
+          "low": 122.5,
+          "close": 122.5,
+          "change": -2.5,
+          "capacity": 68450685,
+          "turnover": 8494233640,
+          "transaction": 18293
+        },
+        {
+          "date": "2026-06-11",
+          "open": 125.0,
+          "high": 127.5,
+          "low": 121.5,
+          "close": 125.5,
+          "change": 3.0,
+          "capacity": 62123741,
+          "turnover": 7772005719,
+          "transaction": 20769
+        },
+        {
+          "date": "2026-06-12",
+          "open": 127.0,
+          "high": 129.0,
+          "low": 120.5,
+          "close": 122.0,
+          "change": -3.5,
+          "capacity": 42713760,
+          "turnover": 5254336888,
+          "transaction": 26427
+        },
+        {
+          "date": "2026-06-15",
+          "open": 126.0,
+          "high": 128.0,
+          "low": 124.5,
+          "close": 127.5,
+          "change": 5.5,
+          "capacity": 25895319,
+          "turnover": 3284634262,
+          "transaction": 11604
+        },
+        {
+          "date": "2026-06-16",
+          "open": 128.5,
+          "high": 132.5,
+          "low": 127.5,
+          "close": 132.0,
+          "change": 4.5,
+          "capacity": 40287477,
+          "turnover": 5267232680,
+          "transaction": 16615
+        }
+      ]
+    },
+    {
+      "code": "SinoPac Financial Holding (Yong Feng Jin)",
+      "name": "永豐金",
+      "group": "Financial & Insurance",
+      "market": "TWSE Listed",
+      "date_base": "2026-06-02",
+      "date_today": "2026-06-16",
+      "close_base": 31.0,
+      "close_today": 35.3,
+      "pct_10d": 13.870967741935475,
+      "last_5d": [
+        {
+          "date": "2026-06-10",
+          "open": 34.3,
+          "high": 34.3,
+          "low": 33.0,
+          "close": 33.0,
+          "change": -1.25,
+          "capacity": 52876983,
+          "turnover": 1767147547,
+          "transaction": 18824
+        },
+        {
+          "date": "2026-06-11",
+          "open": 33.0,
+          "high": 33.3,
+          "low": 32.5,
+          "close": 33.25,
+          "change": 0.25,
+          "capacity": 45454788,
+          "turnover": 1501662719,
+          "transaction": 10999
+        },
+        {
+          "date": "2026-06-12",
+          "open": 33.55,
+          "high": 34.95,
+          "low": 33.55,
+          "close": 34.15,
+          "change": 0.9,
+          "capacity": 65256890,
+          "turnover": 2241692002,
+          "transaction": 15277
+        },
+        {
+          "date": "2026-06-15",
+          "open": 35.0,
+          "high": 35.2,
+          "low": 34.2,
+          "close": 35.2,
+          "change": 1.05,
+          "capacity": 55731231,
+          "turnover": 1946750160,
+          "transaction": 17214
+        },
+        {
+          "date": "2026-06-16",
+          "open": 35.45,
+          "high": 35.65,
+          "low": 35.2,
+          "close": 35.3,
+          "change": 0.1,
+          "capacity": 46626240,
+          "turnover": 1650805192,
+          "transaction": 10694
+        }
+      ],
+      "all_valid": [
+        {
+          "date": "2026-06-02",
+          "open": 30.4,
+          "high": 31.0,
+          "low": 30.3,
+          "close": 31.0,
+          "change": 0.55,
+          "capacity": 53360627,
+          "turnover": 1643764883,
+          "transaction": 11537
+        },
+        {
+          "date": "2026-06-03",
+          "open": 31.5,
+          "high": 33.0,
+          "low": 31.15,
+          "close": 33.0,
+          "change": 2.0,
+          "capacity": 93687028,
+          "turnover": 3030015132,
+          "transaction": 21605
+        },
+        {
+          "date": "2026-06-04",
+          "open": 32.85,
+          "high": 33.3,
+          "low": 32.45,
+          "close": 33.15,
+          "change": 0.15,
+          "capacity": 54394671,
+          "turnover": 1799103879,
+          "transaction": 15685
+        },
+        {
+          "date": "2026-06-05",
+          "open": 33.05,
+          "high": 33.15,
+          "low": 32.45,
+          "close": 32.7,
+          "change": -0.45,
+          "capacity": 43990630,
+          "turnover": 1442349908,
+          "transaction": 13573
+        },
+        {
+          "date": "2026-06-08",
+          "open": 31.9,
+          "high": 32.3,
+          "low": 31.35,
+          "close": 31.9,
+          "change": -0.8,
+          "capacity": 45790751,
+          "turnover": 1456256802,
+          "transaction": 12904
+        },
+        {
+          "date": "2026-06-09",
+          "open": 32.45,
+          "high": 34.4,
+          "low": 32.35,
+          "close": 34.25,
+          "change": 2.35,
+          "capacity": 80605349,
+          "turnover": 2720271419,
+          "transaction": 22545
+        },
+        {
+          "date": "2026-06-10",
+          "open": 34.3,
+          "high": 34.3,
+          "low": 33.0,
+          "close": 33.0,
+          "change": -1.25,
+          "capacity": 52876983,
+          "turnover": 1767147547,
+          "transaction": 18824
+        },
+        {
+          "date": "2026-06-11",
+          "open": 33.0,
+          "high": 33.3,
+          "low": 32.5,
+          "close": 33.25,
+          "change": 0.25,
+          "capacity": 45454788,
+          "turnover": 1501662719,
+          "transaction": 10999
+        },
+        {
+          "date": "2026-06-12",
+          "open": 33.55,
+          "high": 34.95,
+          "low": 33.55,
+          "close": 34.15,
+          "change": 0.9,
+          "capacity": 65256890,
+          "turnover": 2241692002,
+          "transaction": 15277
+        },
+        {
+          "date": "2026-06-15",
+          "open": 35.0,
+          "high": 35.2,
+          "low": 34.2,
+          "close": 35.2,
+          "change": 1.05,
+          "capacity": 55731231,
+          "turnover": 1946750160,
+          "transaction": 17214
+        },
+        {
+          "date": "2026-06-16",
+          "open": 35.45,
+          "high": 35.65,
+          "low": 35.2,
+          "close": 35.3,
+          "change": 0.1,
+          "capacity": 46626240,
+          "turnover": 1650805192,
+          "transaction": 10694
+        }
+      ]
+    },
+    {
+      "code": "Central Reinsurance (Zhong Zai Bao)",
+      "name": "中再保",
+      "group": "Financial & Insurance",
+      "market": "TWSE Listed",
+      "date_base": "2026-06-02",
+      "date_today": "2026-06-16",
+      "close_base": 35.05,
+      "close_today": 39.75,
+      "pct_10d": 13.409415121255359,
+      "last_5d": [
+        {
+          "date": "2026-06-10",
+          "open": 36.7,
+          "high": 37.25,
+          "low": 36.5,
+          "close": 36.6,
+          "change": -0.4,
+          "capacity": 1271192,
+          "turnover": 46835746,
+          "transaction": 843
+        },
+        {
+          "date": "2026-06-11",
+          "open": 37.0,
+          "high": 37.0,
+          "low": 36.0,
+          "close": 36.45,
+          "change": -0.15,
+          "capacity": 1180982,
+          "turnover": 43022364,
+          "transaction": 793
+        },
+        {
+          "date": "2026-06-12",
+          "open": 36.55,
+          "high": 37.15,
+          "low": 36.55,
+          "close": 37.15,
+          "change": 0.7,
+          "capacity": 1915756,
+          "turnover": 70734624,
+          "transaction": 964
+        },
+        {
+          "date": "2026-06-15",
+          "open": 37.5,
+          "high": 38.25,
+          "low": 37.5,
+          "close": 38.0,
+          "change": 0.85,
+          "capacity": 3532016,
+          "turnover": 133890908,
+          "transaction": 1767
+        },
+        {
+          "date": "2026-06-16",
+          "open": 38.55,
+          "high": 40.2,
+          "low": 38.5,
+          "close": 39.75,
+          "change": 1.75,
+          "capacity": 6064437,
+          "turnover": 239863085,
+          "transaction": 3100
+        }
+      ],
+      "all_valid": [
+        {
+          "date": "2026-06-02",
+          "open": 35.05,
+          "high": 35.1,
+          "low": 34.9,
+          "close": 35.05,
+          "change": -0.1,
+          "capacity": 1246463,
+          "turnover": 43624579,
+          "transaction": 799
+        },
+        {
+          "date": "2026-06-03",
+          "open": 35.2,
+          "high": 36.95,
+          "low": 35.1,
+          "close": 36.8,
+          "change": 1.75,
+          "capacity": 3628001,
+          "turnover": 131468120,
+          "transaction": 1984
+        },
+        {
+          "date": "2026-06-04",
+          "open": 36.75,
+          "high": 36.9,
+          "low": 36.5,
+          "close": 36.85,
+          "change": 0.05,
+          "capacity": 1280729,
+          "turnover": 47086972,
+          "transaction": 792
+        },
+        {
+          "date": "2026-06-05",
+          "open": 36.75,
+          "high": 37.2,
+          "low": 36.55,
+          "close": 36.9,
+          "change": 0.05,
+          "capacity": 1517339,
+          "turnover": 56031432,
+          "transaction": 1125
+        },
+        {
+          "date": "2026-06-08",
+          "open": 35.1,
+          "high": 36.0,
+          "low": 35.1,
+          "close": 35.55,
+          "change": -1.35,
+          "capacity": 3086149,
+          "turnover": 109812063,
+          "transaction": 1670
+        },
+        {
+          "date": "2026-06-09",
+          "open": 35.5,
+          "high": 37.2,
+          "low": 35.5,
+          "close": 37.0,
+          "change": 1.45,
+          "capacity": 2555738,
+          "turnover": 93774584,
+          "transaction": 1684
+        },
+        {
+          "date": "2026-06-10",
+          "open": 36.7,
+          "high": 37.25,
+          "low": 36.5,
+          "close": 36.6,
+          "change": -0.4,
+          "capacity": 1271192,
+          "turnover": 46835746,
+          "transaction": 843
+        },
+        {
+          "date": "2026-06-11",
+          "open": 37.0,
+          "high": 37.0,
+          "low": 36.0,
+          "close": 36.45,
+          "change": -0.15,
+          "capacity": 1180982,
+          "turnover": 43022364,
+          "transaction": 793
+        },
+        {
+          "date": "2026-06-12",
+          "open": 36.55,
+          "high": 37.15,
+          "low": 36.55,
+          "close": 37.15,
+          "change": 0.7,
+          "capacity": 1915756,
+          "turnover": 70734624,
+          "transaction": 964
+        },
+        {
+          "date": "2026-06-15",
+          "open": 37.5,
+          "high": 38.25,
+          "low": 37.5,
+          "close": 38.0,
+          "change": 0.85,
+          "capacity": 3532016,
+          "turnover": 133890908,
+          "transaction": 1767
+        },
+        {
+          "date": "2026-06-16",
+          "open": 38.55,
+          "high": 40.2,
+          "low": 38.5,
+          "close": 39.75,
+          "change": 1.75,
+          "capacity": 6064437,
+          "turnover": 239863085,
+          "transaction": 3100
+        }
+      ]
+    },
+    {
+      "code": "First Financial Holding (Di Yi Jin)",
+      "name": "第一金",
+      "group": "Financial & Insurance",
+      "market": "TWSE Listed",
+      "date_base": "2026-06-02",
+      "date_today": "2026-06-16",
+      "close_base": 28.15,
+      "close_today": 31.8,
+      "pct_10d": 12.966252220248675,
+      "last_5d": [
+        {
+          "date": "2026-06-10",
+          "open": 30.4,
+          "high": 30.95,
+          "low": 30.2,
+          "close": 30.55,
+          "change": 0.05,
+          "capacity": 68192460,
+          "turnover": 2085900220,
+          "transaction": 17436
+        },
+        {
+          "date": "2026-06-11",
+          "open": 30.55,
+          "high": 30.75,
+          "low": 29.95,
+          "close": 30.65,
+          "change": 0.1,
+          "capacity": 46641122,
+          "turnover": 1418581485,
+          "transaction": 11746
+        },
+        {
+          "date": "2026-06-12",
+          "open": 30.7,
+          "high": 31.35,
+          "low": 30.65,
+          "close": 31.0,
+          "change": 0.35,
+          "capacity": 48818443,
+          "turnover": 1512621104,
+          "transaction": 12687
+        },
+        {
+          "date": "2026-06-15",
+          "open": 31.35,
+          "high": 31.65,
+          "low": 31.05,
+          "close": 31.3,
+          "change": 0.3,
+          "capacity": 39236972,
+          "turnover": 1227066408,
+          "transaction": 10293
+        },
+        {
+          "date": "2026-06-16",
+          "open": 31.3,
+          "high": 31.8,
+          "low": 31.25,
+          "close": 31.8,
+          "change": 0.5,
+          "capacity": 50858769,
+          "turnover": 1607963621,
+          "transaction": 13660
+        }
+      ],
+      "all_valid": [
+        {
+          "date": "2026-06-02",
+          "open": 27.75,
+          "high": 28.2,
+          "low": 27.7,
+          "close": 28.15,
+          "change": 0.4,
+          "capacity": 57901717,
+          "turnover": 1623219883,
+          "transaction": 15894
+        },
+        {
+          "date": "2026-06-03",
+          "open": 28.4,
+          "high": 29.3,
+          "low": 28.1,
+          "close": 29.0,
+          "change": 0.85,
+          "capacity": 81559026,
+          "turnover": 2352399992,
+          "transaction": 18264
+        },
+        {
+          "date": "2026-06-04",
+          "open": 29.0,
+          "high": 29.65,
+          "low": 28.85,
+          "close": 29.55,
+          "change": 0.55,
+          "capacity": 89347433,
+          "turnover": 2628882168,
+          "transaction": 18591
+        },
+        {
+          "date": "2026-06-05",
+          "open": 29.5,
+          "high": 29.55,
+          "low": 28.95,
+          "close": 29.3,
+          "change": -0.25,
+          "capacity": 57303236,
+          "turnover": 1677763858,
+          "transaction": 15326
+        },
+        {
+          "date": "2026-06-08",
+          "open": 28.7,
+          "high": 29.15,
+          "low": 28.45,
+          "close": 29.1,
+          "change": -0.2,
+          "capacity": 50961160,
+          "turnover": 1470323559,
+          "transaction": 12553
+        },
+        {
+          "date": "2026-06-09",
+          "open": 29.1,
+          "high": 30.55,
+          "low": 29.1,
+          "close": 30.5,
+          "change": 1.4,
+          "capacity": 99331453,
+          "turnover": 2992834042,
+          "transaction": 26835
+        },
+        {
+          "date": "2026-06-10",
+          "open": 30.4,
+          "high": 30.95,
+          "low": 30.2,
+          "close": 30.55,
+          "change": 0.05,
+          "capacity": 68192460,
+          "turnover": 2085900220,
+          "transaction": 17436
+        },
+        {
+          "date": "2026-06-11",
+          "open": 30.55,
+          "high": 30.75,
+          "low": 29.95,
+          "close": 30.65,
+          "change": 0.1,
+          "capacity": 46641122,
+          "turnover": 1418581485,
+          "transaction": 11746
+        },
+        {
+          "date": "2026-06-12",
+          "open": 30.7,
+          "high": 31.35,
+          "low": 30.65,
+          "close": 31.0,
+          "change": 0.35,
+          "capacity": 48818443,
+          "turnover": 1512621104,
+          "transaction": 12687
+        },
+        {
+          "date": "2026-06-15",
+          "open": 31.35,
+          "high": 31.65,
+          "low": 31.05,
+          "close": 31.3,
+          "change": 0.3,
+          "capacity": 39236972,
+          "turnover": 1227066408,
+          "transaction": 10293
+        },
+        {
+          "date": "2026-06-16",
+          "open": 31.3,
+          "high": 31.8,
+          "low": 31.25,
+          "close": 31.8,
+          "change": 0.5,
+          "capacity": 50858769,
+          "turnover": 1607963621,
+          "transaction": 13660
+        }
+      ]
+    },
+    {
+      "code": "Taiwan Business Bank (Zhang Yin / Chang Hwa Bank)",
+      "name": "彰銀",
+      "group": "Financial & Insurance",
+      "market": "TWSE Listed",
+      "date_base": "2026-06-02",
+      "date_today": "2026-06-16",
+      "close_base": 20.6,
+      "close_today": 22.8,
+      "pct_10d": 10.679611650485432,
+      "last_5d": [
+        {
+          "date": "2026-06-10",
+          "open": 22.05,
+          "high": 22.5,
+          "low": 22.0,
+          "close": 22.35,
+          "change": 0.05,
+          "capacity": 62205010,
+          "turnover": 1388599074,
+          "transaction": 11477
+        },
+        {
+          "date": "2026-06-11",
+          "open": 22.3,
+          "high": 22.4,
+          "low": 21.95,
+          "close": 22.35,
+          "change": 0.0,
+          "capacity": 42757660,
+          "turnover": 947174095,
+          "transaction": 7119
+        },
+        {
+          "date": "2026-06-12",
+          "open": 22.5,
+          "high": 22.95,
+          "low": 22.45,
+          "close": 22.6,
+          "change": 0.25,
+          "capacity": 39882208,
+          "turnover": 905178955,
+          "transaction": 7528
+        },
+        {
+          "date": "2026-06-15",
+          "open": 22.95,
+          "high": 23.05,
+          "low": 22.5,
+          "close": 22.65,
+          "change": 0.05,
+          "capacity": 31499249,
+          "turnover": 715551557,
+          "transaction": 7352
+        },
+        {
+          "date": "2026-06-16",
+          "open": 22.75,
+          "high": 22.9,
+          "low": 22.6,
+          "close": 22.8,
+          "change": 0.15,
+          "capacity": 21365037,
+          "turnover": 486768261,
+          "transaction": 5137
+        }
+      ],
+      "all_valid": [
+        {
+          "date": "2026-06-02",
+          "open": 20.4,
+          "high": 20.65,
+          "low": 20.3,
+          "close": 20.6,
+          "change": 0.15,
+          "capacity": 36952646,
+          "turnover": 757345043,
+          "transaction": 10517
+        },
+        {
+          "date": "2026-06-03",
+          "open": 20.7,
+          "high": 21.2,
+          "low": 20.6,
+          "close": 21.1,
+          "change": 0.5,
+          "capacity": 49122546,
+          "turnover": 1030091003,
+          "transaction": 11659
+        },
+        {
+          "date": "2026-06-04",
+          "open": 21.0,
+          "high": 21.6,
+          "low": 20.95,
+          "close": 21.4,
+          "change": 0.3,
+          "capacity": 53337581,
+          "turnover": 1141697617,
+          "transaction": 9968
+        },
+        {
+          "date": "2026-06-05",
+          "open": 21.35,
+          "high": 21.5,
+          "low": 21.05,
+          "close": 21.45,
+          "change": 0.05,
+          "capacity": 33928699,
+          "turnover": 723887379,
+          "transaction": 8080
+        },
+        {
+          "date": "2026-06-08",
+          "open": 21.0,
+          "high": 21.2,
+          "low": 20.8,
+          "close": 21.0,
+          "change": -0.45,
+          "capacity": 31518796,
+          "turnover": 660343561,
+          "transaction": 9149
+        },
+        {
+          "date": "2026-06-09",
+          "open": 21.05,
+          "high": 22.4,
+          "low": 21.05,
+          "close": 22.3,
+          "change": 1.3,
+          "capacity": 92513795,
+          "turnover": 2027152192,
+          "transaction": 18638
+        },
+        {
+          "date": "2026-06-10",
+          "open": 22.05,
+          "high": 22.5,
+          "low": 22.0,
+          "close": 22.35,
+          "change": 0.05,
+          "capacity": 62205010,
+          "turnover": 1388599074,
+          "transaction": 11477
+        },
+        {
+          "date": "2026-06-11",
+          "open": 22.3,
+          "high": 22.4,
+          "low": 21.95,
+          "close": 22.35,
+          "change": 0.0,
+          "capacity": 42757660,
+          "turnover": 947174095,
+          "transaction": 7119
+        },
+        {
+          "date": "2026-06-12",
+          "open": 22.5,
+          "high": 22.95,
+          "low": 22.45,
+          "close": 22.6,
+          "change": 0.25,
+          "capacity": 39882208,
+          "turnover": 905178955,
+          "transaction": 7528
+        },
+        {
+          "date": "2026-06-15",
+          "open": 22.95,
+          "high": 23.05,
+          "low": 22.5,
+          "close": 22.65,
+          "change": 0.05,
+          "capacity": 31499249,
+          "turnover": 715551557,
+          "transaction": 7352
+        },
+        {
+          "date": "2026-06-16",
+          "open": 22.75,
+          "high": 22.9,
+          "low": 22.6,
+          "close": 22.8,
+          "change": 0.15,
+          "capacity": 21365037,
+          "turnover": 486768261,
+          "transaction": 5137
+        }
+      ]
+    },
+    {
+      "code": "CTBC Financial Holding (Zhong Xin Jin)",
+      "name": "中信金",
+      "group": "Financial & Insurance",
+      "market": "TWSE Listed",
+      "date_base": "2026-06-02",
+      "date_today": "2026-06-16",
+      "close_base": 64.1,
+      "close_today": 70.8,
+      "pct_10d": 10.452418096723875,
+      "last_5d": [
+        {
+          "date": "2026-06-10",
+          "open": 68.3,
+          "high": 68.7,
+          "low": 67.1,
+          "close": 68.2,
+          "change": -1.0,
+          "capacity": 63864184,
+          "turnover": 4335219634,
+          "transaction": 21595
+        },
+        {
+          "date": "2026-06-11",
+          "open": 68.5,
+          "high": 68.5,
+          "low": 66.5,
+          "close": 67.5,
+          "change": -0.7,
+          "capacity": 63717773,
+          "turnover": 4289522018,
+          "transaction": 18520
+        },
+        {
+          "date": "2026-06-12",
+          "open": 67.8,
+          "high": 69.2,
+          "low": 66.9,
+          "close": 67.6,
+          "change": 0.1,
+          "capacity": 83389953,
+          "turnover": 5637960973,
+          "transaction": 25089
+        },
+        {
+          "date": "2026-06-15",
+          "open": 71.7,
+          "high": 72.6,
+          "low": 69.0,
+          "close": 70.1,
+          "change": 2.5,
+          "capacity": 42928285,
+          "turnover": 3012743417,
+          "transaction": 19273
+        },
+        {
+          "date": "2026-06-16",
+          "open": 70.4,
+          "high": 71.7,
+          "low": 69.6,
+          "close": 70.8,
+          "change": 0.7,
+          "capacity": 40981294,
+          "turnover": 2900607333,
+          "transaction": 18270
+        }
+      ],
+      "all_valid": [
+        {
+          "date": "2026-06-02",
+          "open": 62.0,
+          "high": 64.4,
+          "low": 61.8,
+          "close": 64.1,
+          "change": 2.0,
+          "capacity": 70381891,
+          "turnover": 4470357405,
+          "transaction": 24970
+        },
+        {
+          "date": "2026-06-03",
+          "open": 65.4,
+          "high": 70.5,
+          "low": 64.3,
+          "close": 70.5,
+          "change": 6.4,
+          "capacity": 84076949,
+          "turnover": 5757188216,
+          "transaction": 38392
+        },
+        {
+          "date": "2026-06-04",
+          "open": 68.0,
+          "high": 69.2,
+          "low": 66.0,
+          "close": 68.0,
+          "change": -2.5,
+          "capacity": 97008090,
+          "turnover": 6564868147,
+          "transaction": 37738
+        },
+        {
+          "date": "2026-06-05",
+          "open": 66.3,
+          "high": 68.0,
+          "low": 66.0,
+          "close": 66.6,
+          "change": -1.4,
+          "capacity": 63844979,
+          "turnover": 4270398202,
+          "transaction": 27146
+        },
+        {
+          "date": "2026-06-08",
+          "open": 65.2,
+          "high": 66.9,
+          "low": 64.5,
+          "close": 65.4,
+          "change": -1.2,
+          "capacity": 46262357,
+          "turnover": 3033468042,
+          "transaction": 21671
+        },
+        {
+          "date": "2026-06-09",
+          "open": 64.8,
+          "high": 69.5,
+          "low": 64.8,
+          "close": 69.2,
+          "change": 3.8,
+          "capacity": 53708919,
+          "turnover": 3663756208,
+          "transaction": 24039
+        },
+        {
+          "date": "2026-06-10",
+          "open": 68.3,
+          "high": 68.7,
+          "low": 67.1,
+          "close": 68.2,
+          "change": -1.0,
+          "capacity": 63864184,
+          "turnover": 4335219634,
+          "transaction": 21595
+        },
+        {
+          "date": "2026-06-11",
+          "open": 68.5,
+          "high": 68.5,
+          "low": 66.5,
+          "close": 67.5,
+          "change": -0.7,
+          "capacity": 63717773,
+          "turnover": 4289522018,
+          "transaction": 18520
+        },
+        {
+          "date": "2026-06-12",
+          "open": 67.8,
+          "high": 69.2,
+          "low": 66.9,
+          "close": 67.6,
+          "change": 0.1,
+          "capacity": 83389953,
+          "turnover": 5637960973,
+          "transaction": 25089
+        },
+        {
+          "date": "2026-06-15",
+          "open": 71.7,
+          "high": 72.6,
+          "low": 69.0,
+          "close": 70.1,
+          "change": 2.5,
+          "capacity": 42928285,
+          "turnover": 3012743417,
+          "transaction": 19273
+        },
+        {
+          "date": "2026-06-16",
+          "open": 70.4,
+          "high": 71.7,
+          "low": 69.6,
+          "close": 70.8,
+          "change": 0.7,
+          "capacity": 40981294,
+          "turnover": 2900607333,
+          "transaction": 18270
+        }
+      ]
+    },
+    {
+      "code": "Zhi He Securities",
+      "name": "致和證",
+      "group": "Financial & Insurance",
+      "market": "TPEx (OTC) Listed",
+      "date_base": "2026-06-02",
+      "date_today": "2026-06-16",
+      "close_base": 45.4,
+      "close_today": 49.95,
+      "pct_10d": 10.022026431718071,
+      "last_5d": [
+        {
+          "date": "2026-06-10",
+          "open": 45.4,
+          "high": 45.9,
+          "low": 43.6,
+          "close": 43.65,
+          "change": -3.05,
+          "capacity": 11075000,
+          "turnover": 495680000,
+          "transaction": 8547
+        },
+        {
+          "date": "2026-06-11",
+          "open": 43.0,
+          "high": 43.95,
+          "low": 42.15,
+          "close": 43.0,
+          "change": -0.65,
+          "capacity": 7218000,
+          "turnover": 310189000,
+          "transaction": 5518
+        },
+        {
+          "date": "2026-06-12",
+          "open": 45.6,
+          "high": 47.3,
+          "low": 45.2,
+          "close": 47.2,
+          "change": 4.2,
+          "capacity": 8977000,
+          "turnover": 417311000,
+          "transaction": 4195
+        },
+        {
+          "date": "2026-06-15",
+          "open": 49.15,
+          "high": 50.8,
+          "low": 48.65,
+          "close": 49.8,
+          "change": 2.6,
+          "capacity": 9244000,
+          "turnover": 461229000,
+          "transaction": 4991
+        },
+        {
+          "date": "2026-06-16",
+          "open": 50.3,
+          "high": 51.7,
+          "low": 49.55,
+          "close": 49.95,
+          "change": 0.15,
+          "capacity": 7847000,
+          "turnover": 395811000,
+          "transaction": 6412
+        }
+      ],
+      "all_valid": [
+        {
+          "date": "2026-06-02",
+          "open": 43.35,
+          "high": 46.3,
+          "low": 42.3,
+          "close": 45.4,
+          "change": 2.0,
+          "capacity": 10992000,
+          "turnover": 487009000,
+          "transaction": 6454
+        },
+        {
+          "date": "2026-06-03",
+          "open": 46.6,
+          "high": 49.9,
+          "low": 45.65,
+          "close": 49.9,
+          "change": 4.5,
+          "capacity": 17689000,
+          "turnover": 864518000,
+          "transaction": 11448
+        },
+        {
+          "date": "2026-06-04",
+          "open": 49.5,
+          "high": 51.8,
+          "low": 48.7,
+          "close": 50.6,
+          "change": 0.7,
+          "capacity": 12648000,
+          "turnover": 632878000,
+          "transaction": 8771
+        },
+        {
+          "date": "2026-06-05",
+          "open": 50.2,
+          "high": 53.6,
+          "low": 48.85,
+          "close": 53.6,
+          "change": 3.0,
+          "capacity": 15315000,
+          "turnover": 782382000,
+          "transaction": 7587
+        },
+        {
+          "date": "2026-06-08",
+          "open": 48.25,
+          "high": 48.6,
+          "low": 48.25,
+          "close": 48.25,
+          "change": -5.35,
+          "capacity": 7111000,
+          "turnover": 343201000,
+          "transaction": 2769
+        },
+        {
+          "date": "2026-06-09",
+          "open": 45.6,
+          "high": 48.2,
+          "low": 43.5,
+          "close": 46.7,
+          "change": -1.55,
+          "capacity": 21389000,
+          "turnover": 961828000,
+          "transaction": 15698
+        },
+        {
+          "date": "2026-06-10",
+          "open": 45.4,
+          "high": 45.9,
+          "low": 43.6,
+          "close": 43.65,
+          "change": -3.05,
+          "capacity": 11075000,
+          "turnover": 495680000,
+          "transaction": 8547
+        },
+        {
+          "date": "2026-06-11",
+          "open": 43.0,
+          "high": 43.95,
+          "low": 42.15,
+          "close": 43.0,
+          "change": -0.65,
+          "capacity": 7218000,
+          "turnover": 310189000,
+          "transaction": 5518
+        },
+        {
+          "date": "2026-06-12",
+          "open": 45.6,
+          "high": 47.3,
+          "low": 45.2,
+          "close": 47.2,
+          "change": 4.2,
+          "capacity": 8977000,
+          "turnover": 417311000,
+          "transaction": 4195
+        },
+        {
+          "date": "2026-06-15",
+          "open": 49.15,
+          "high": 50.8,
+          "low": 48.65,
+          "close": 49.8,
+          "change": 2.6,
+          "capacity": 9244000,
+          "turnover": 461229000,
+          "transaction": 4991
+        },
+        {
+          "date": "2026-06-16",
+          "open": 50.3,
+          "high": 51.7,
+          "low": 49.55,
+          "close": 49.95,
+          "change": 0.15,
+          "capacity": 7847000,
+          "turnover": 395811000,
+          "transaction": 6412
+        }
+      ]
+    }
+  ]
+}
